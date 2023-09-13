@@ -1,8 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
+import Header from "../components/header"
+import Project from "../components/Project"
 import Layout from "../components/layout"
+import Introduce from "../components/Introduce"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
@@ -70,52 +74,14 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
+  <Wrap>
+    <Header />
+    <Main>
+      <Introduce />
+      <Line />
+      <Project />
+    </Main>
+  </Wrap>
 )
 
 /**
@@ -126,3 +92,34 @@ const IndexPage = () => (
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
+
+const Wrap = styled.div`
+  width: 920px;
+  margin: 0 auto;
+`
+const Main = styled.main`
+  padding-top: 280px;
+  text-align: center;
+  margin-bottom: 170px;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(
+      rgb(254, 254, 254) 0%,
+      rgb(254, 254, 254) 40%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    z-index: 2;
+  }
+`
+const Line = styled.div`
+  margin: 100px auto;
+  width: 80%;
+  height: 1px;
+  background-color: black;
+  opacity: 0.1;
+`
