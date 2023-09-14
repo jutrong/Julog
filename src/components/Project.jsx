@@ -4,6 +4,12 @@ import phone from "../images/phone.png"
 import skills from "../images/skill.png"
 import { Link } from "gatsby"
 
+export const sizes = {
+  mobile: `max-width: 480px`,
+  tablet: `max-width: 768px`,
+  desktop: `max-width: 1024px`,
+}
+
 const Project = () => {
   return (
     <Project_Wrap>
@@ -97,8 +103,18 @@ const Project_name = styled.h2`
 const Project_service_wrap = styled.div`
   display: flex;
   justify-content: space-between;
+
   margin-top: 15px;
   position: relative;
+
+  @media (${sizes.tablet}) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  @media (${sizes.mobile}) {
+    flex-direction: column;
+  }
 `
 const Project_service = styled.p`
   font-size: 16px;
@@ -153,12 +169,32 @@ const Project_btn_second = styled.a`
 const Phone = styled.img`
   width: 200px;
   margin-right: 60px;
+  @media (${sizes.tablet}) {
+    margin-top: 40px;
+  }
+
+  @media (${sizes.mobile}) {
+    margin-top: 40px;
+  }
 `
 const Project_content = styled.div`
   display: flex;
   flex-direction: column;
   div {
     margin: 20px 0;
+    display: flex;
+  }
+  span {
+    @media (${sizes.tablet}) {
+      justify-content: space-around;
+      width: 90%;
+    }
+
+    @media (${sizes.mobile}) {
+      justify-content: space-around;
+      width: 90%;
+      font-size: 14px;
+    }
   }
 `
 
@@ -235,11 +271,17 @@ const Implement_right = styled.span`
 
 const Skills = styled.div`
   font-weight: 700;
-  font-size: 25px;
+  font-size: 14px;
   text-align: left;
+  @media (${sizes.mobile}) {
+    width: 90%;
+  }
 `
 const Skills_img = styled.img`
   margin: 30px;
   width: 70%;
   object-fit: cover;
+  @media (${sizes.mobile}) {
+    width: 90%;
+  }
 `

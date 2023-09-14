@@ -11,6 +11,12 @@ import Layout from "../components/layout"
 import Introduce from "../components/Introduce"
 import Seo from "../components/seo"
 
+export const sizes = {
+  mobile: `max-width: 480px`,
+  tablet: `max-width: 768px`,
+  desktop: `max-width: 1024px`,
+}
+
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
@@ -38,8 +44,16 @@ export const Head = () => <Seo title="Home" />
 export default IndexPage
 
 const Wrap = styled.div`
-  width: 920px;
+  width: 1024px;
   margin: 0 auto;
+
+  @media (${sizes.tablet}) {
+    width: 90%;
+  }
+
+  @media (${sizes.mobile}) {
+    width: 93%;
+  }
 `
 const Main = styled.main`
   padding-top: 280px;
@@ -58,6 +72,16 @@ const Main = styled.main`
       rgba(255, 255, 255, 0.01) 100%
     );
     z-index: 2;
+  }
+
+  @media (${sizes.tablet}) {
+    padding-top: 150px;
+    margin-bottom: 100px;
+  }
+
+  @media (${sizes.mobile}) {
+    padding-top: 100px;
+    margin-bottom: 70px;
   }
 `
 const Line = styled.div`
