@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const Project = () => {
   return (
-    <Wrap>
+    <Project_Wrap>
       <Project_title>Projects.</Project_title>
       <Project_name>당장 손민수</Project_name>
       <Project_service_wrap>
@@ -61,12 +61,12 @@ const Project = () => {
         <Skills>기술 스택</Skills>
         <Skills_img src={skills} />
       </Project_content>
-    </Wrap>
+    </Project_Wrap>
   )
 }
 export default Project
 
-const Wrap = styled.div`
+const Project_Wrap = styled.div`
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
 `
@@ -74,6 +74,7 @@ const Project_title = styled.h1`
   text-align: left;
   font-size: 24px;
   margin-bottom: 90px;
+  font-family: "IBM Plex Sans", sans-serif;
 `
 
 const Project_name = styled.h2`
