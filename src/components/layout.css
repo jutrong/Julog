@@ -45,6 +45,7 @@ body {
   word-wrap: break-word;
   overflow-y: hidden;
   scrollbar-width: none;
+  background-color: rgb(254, 254, 254);
 }
 a {
   background-color: transparent;

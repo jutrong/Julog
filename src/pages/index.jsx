@@ -1,7 +1,9 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import Header from "../components/header"
 import Project from "../components/Project"
@@ -19,25 +21,30 @@ export const sizes = {
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = () => (
-  <>
-    <Wrap>
-      <Header />
-      <Main>
-        <Introduce />
-        <Line />
-        <Project />
-        <Line />
-        <Skills />
-        <Line />
-        <Experience />
-      </Main>
-    </Wrap>
-    <Footer>
-      <Footer_content></Footer_content>
-    </Footer>
-  </>
-)
+const IndexPage = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+  return (
+    <>
+      <Wrap>
+        <Header />
+        <Main>
+          <Introduce />
+          <Line />
+          <Project />
+          <Line />
+          <Skills />
+          <Line />
+          <Experience />
+        </Main>
+      </Wrap>
+      <Footer>
+        <FooterContent></FooterContent>
+      </Footer>
+    </>
+  )
+}
 
 export const Head = () => <Seo title="Home" />
 
@@ -56,7 +63,7 @@ const Wrap = styled.div`
   }
 `
 const Main = styled.main`
-  padding-top: 280px;
+  padding-top: 250px;
   text-align: center;
   margin-bottom: 170px;
   &::before {
@@ -96,6 +103,6 @@ const Footer = styled.div`
   background-color: #dfe4ea;
   padding: 10px 0;
 `
-const Footer_content = styled.p`
+const FooterContent = styled.p`
   text-align: center;
 `

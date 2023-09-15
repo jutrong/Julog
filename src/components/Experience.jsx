@@ -19,15 +19,20 @@ const experienceData = [
 const Experience = () => {
   return (
     <>
-      <Experience_title>Experience.</Experience_title>
+      <ExperienceTitle>Experience.</ExperienceTitle>
       {experienceData.map(experience => (
-        <Experience_content>
-          <Experience_name>{experience.experienceName}</Experience_name>
-          <Experience_period>{experience.experiencePeriod}</Experience_period>
-          <Experience_explain>
-            {experience.experienceExplain}
-          </Experience_explain>
-        </Experience_content>
+        <ExperienceContent
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <ExperienceName>{experience.experienceName}</ExperienceName>
+          <ExperiencePeriod>{experience.experiencePeriod}</ExperiencePeriod>
+          <ExperienceExplain>{experience.experienceExplain}</ExperienceExplain>
+        </ExperienceContent>
       ))}
     </>
   )
@@ -35,23 +40,23 @@ const Experience = () => {
 
 export default Experience
 
-const Experience_title = styled.h2`
+const ExperienceTitle = styled.h2`
   font-family: "IBM Plex Sans", sans-serif;
   text-align: left;
   font-size: 24px;
   margin-bottom: 70px;
 `
-const Experience_content = styled.div`
+const ExperienceContent = styled.div`
   text-align: left;
   margin-bottom: 70px;
 `
-const Experience_name = styled.h3`
+const ExperienceName = styled.h3`
   margin: 0;
 `
-const Experience_period = styled.span`
+const ExperiencePeriod = styled.span`
   font-size: 11px;
 `
-const Experience_explain = styled.p`
+const ExperienceExplain = styled.p`
   white-space: pre-line;
   font-size: 17px;
   line-height: 1.6em;

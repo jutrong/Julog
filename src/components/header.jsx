@@ -10,16 +10,16 @@ export const sizes = {
 
 const Header = () => {
   return (
-    <Header_bar>
+    <HeaderBar>
       <Logo>JUTRONG</Logo>
       <Menu>MENU</Menu>
-    </Header_bar>
+    </HeaderBar>
   )
 }
 
 export default Header
 
-const Header_bar = styled.header`
+const HeaderBar = styled.header`
   width: 920px;
   display: flex;
   background-color: transparent;
@@ -51,6 +51,20 @@ const Menu = styled.button`
 `
 const Logo = styled.a`
   font-weight: 600;
-  text-decoration: line-through;
   cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+  &:hover&::before {
+    width: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #121212;
+  }
 `

@@ -48,38 +48,46 @@ const skillsData = [
 const Skills = () => {
   return (
     <>
-      <Skills_wrap>
-        <Skills_title>Skills</Skills_title>
+      <SkillsWrap>
+        <SkillsTitle>Skills.</SkillsTitle>
         {skillsData.map(skill => (
-          <Skills_content key={skill.id}>
-            <Skills_name>{skill.skillsName}</Skills_name>
-            <Skills_explain>{skill.skillsExplain}</Skills_explain>
-          </Skills_content>
+          <SkillsContent
+            key={skill.id}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-bottom"
+          >
+            <SkillsName>{skill.skillsName}</SkillsName>
+            <SkillsExplain>{skill.skillsExplain}</SkillsExplain>
+          </SkillsContent>
         ))}
-      </Skills_wrap>
+      </SkillsWrap>
     </>
   )
 }
 
 export default Skills
 
-const Skills_wrap = styled.div`
+const SkillsWrap = styled.div`
   font-family: "Noto Sans KR", sans-serif;
 `
-const Skills_title = styled.h2`
+const SkillsTitle = styled.h2`
   font-family: "IBM Plex Sans", sans-serif;
   text-align: left;
   font-size: 24px;
   margin-bottom: 70px;
 `
-const Skills_content = styled.div`
+const SkillsContent = styled.div`
   text-align: left;
   margin-bottom: 70px;
 `
-const Skills_name = styled.h3`
+const SkillsName = styled.h3`
   font-family: "IBM Plex Sans", sans-serif;
 `
-const Skills_explain = styled.p`
+const SkillsExplain = styled.p`
   white-space: pre-line;
   font-size: 17px;
   line-height: 1.6em;
