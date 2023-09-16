@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import MenuBox from "./MenuBox"
 import device from "../styles/device"
+import useMenu from "../hooks/useMenu"
 
 const Header = () => {
-  const [disabled, setDisabled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setDisabled(false)
-    }, 1200)
+  const { setMenuState, isMenuOpen } = useMenu()
+  const [isClicked, setIsClicked] = useState(false)
 
-    return () => clearTimeout(timer)
-  }, [disabled])
-  const disableMenu = () => {
-    setDisabled(!disabled)
-  }
   const handleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
+    const isScrollLock = document.body.classList.contains("no-scroll")
+    setIsClicked(true)
+    setMenuState()
+
+    if (isScrollLock) {
+      document.body.classList.remove("no-scroll")
+    } else {
+      document.body.classList.add("no-scroll")
+    }
   }
   return (
     <HeaderBar>
-      <Logo onClick={handleMenu}>JUTRONG</Logo>
-      <MenuBox isMenuOpen={isMenuOpen} handleMenu={handleMenu} />
-      <MenuText onClick={handleMenu} isMenuOpen={isMenuOpen}>
-        MENU
+      <Logo onClick={handleMenu} isMenuOpen={isMenuOpen}>
+        JUTRONG
+      </Logo>
+      <MenuText
+        onClick={handleMenu}
+        disabled={isClicked}
+        isMenuOpen={isMenuOpen}
+      >
+        {isMenuOpen ? "CLOSE" : "MENU"}
       </MenuText>
     </HeaderBar>
   )
@@ -65,12 +69,14 @@ const Menu = styled.button`
 `
 const MenuText = styled.div`
   cursor: pointer;
+  color: ${props => (props.isMenuOpen ? "#fff" : `#191919`)};
 `
 const Logo = styled.a`
   font-weight: 600;
   cursor: pointer;
   position: relative;
   transition: 0.5s;
+  color: ${props => (props.isMenuOpen ? "#fff" : `#191919`)};
   &:hover&::before {
     width: 0;
   }

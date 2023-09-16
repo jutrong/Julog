@@ -4,7 +4,7 @@ import Header from "./header"
 import GlobalStyle from "../styles/global"
 import theme from "../styles/theme"
 import device from "../styles/device"
-
+import MenuBox from "../components/MenuBox"
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
           <main>{children}</main>
         </Inner>
       </Container>
+      <MenuBox />
     </ThemeProvider>
   )
 }
@@ -22,7 +23,6 @@ const Layout = ({ children }) => {
 export default Layout
 
 const Container = styled.div`
-  max-width: 128rem;
   max-width: 1900px;
   width: 100%;
   height: 100%;

@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import { Provider } from "react-redux"
 
 import Header from "../components/header"
 import Project from "../components/Project"
@@ -11,6 +12,7 @@ import Layout from "../components/layout"
 import Introduce from "../components/Introduce"
 import Seo from "../components/seo"
 import device from "../styles/device"
+import store from "../modules/Store"
 
 const IndexPage = () => {
   useEffect(() => {
@@ -18,23 +20,25 @@ const IndexPage = () => {
   }, [])
 
   return (
-    <Layout>
-      <Wrap>
-        <Header />
-        <Main>
-          <Introduce />
-          <Line />
-          <Project />
-          <Line />
-          <Skills />
-          <Line />
-          <Experience />
-        </Main>
-      </Wrap>
-      <Footer>
-        <FooterContent></FooterContent>
-      </Footer>
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <Wrap>
+          <Header />
+          <Main>
+            <Introduce />
+            <Line />
+            <Project />
+            <Line />
+            <Skills />
+            <Line />
+            <Experience />
+          </Main>
+        </Wrap>
+        <Footer>
+          <FooterContent></FooterContent>
+        </Footer>
+      </Layout>
+    </Provider>
   )
 }
 
