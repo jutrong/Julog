@@ -1,6 +1,4 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -12,21 +10,15 @@ import Experience from "../components/Experience"
 import Layout from "../components/layout"
 import Introduce from "../components/Introduce"
 import Seo from "../components/seo"
-
-export const sizes = {
-  mobile: `max-width: 480px`,
-  tablet: `max-width: 768px`,
-  desktop: `max-width: 1024px`,
-}
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import device from "../styles/device"
 
 const IndexPage = () => {
   useEffect(() => {
     AOS.init()
   }, [])
+
   return (
-    <>
+    <Layout>
       <Wrap>
         <Header />
         <Main>
@@ -42,7 +34,7 @@ const IndexPage = () => {
       <Footer>
         <FooterContent></FooterContent>
       </Footer>
-    </>
+    </Layout>
   )
 }
 
@@ -54,11 +46,11 @@ const Wrap = styled.div`
   width: 1024px;
   margin: 0 auto;
 
-  @media (${sizes.tablet}) {
+  @media ${device.tablet} {
     width: 90%;
   }
 
-  @media (${sizes.mobile}) {
+  @media ${device.mobileM} {
     width: 93%;
   }
 `
@@ -81,12 +73,12 @@ const Main = styled.main`
     z-index: 2;
   }
 
-  @media (${sizes.tablet}) {
+  @media ${device.tablet} {
     padding-top: 150px;
     margin-bottom: 100px;
   }
 
-  @media (${sizes.mobile}) {
+  @media ${device.mobileL} {
     padding-top: 100px;
     margin-bottom: 70px;
   }

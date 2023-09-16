@@ -2,15 +2,10 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import ImogeImage from "../images/imoge.png"
 import MyImage from "../images/myImg.png"
+import device from "../styles/device"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-
-export const Sizes = {
-  mobile: `max-width: 480px`,
-  tablet: `max-width: 768px`,
-  desktop: `max-width: 1024px`,
-}
 
 const Introduce = () => {
   gsap.registerPlugin(ScrollTrigger)
@@ -20,7 +15,7 @@ const Introduce = () => {
       color: "#4834d4",
       scrollTrigger: {
         trigger: ".highlight",
-        start: "center center",
+        start: "top center",
         end: "center center",
         scrub: 1,
       },
@@ -132,12 +127,12 @@ const IntroduceContent = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (${Sizes.tablet}) {
+  @media ${device.tablet} {
     flex-direction: column;
     align-items: center;
   }
 
-  @media (${Sizes.mobile}) {
+  @media ${device.mobileL} {
     flex-direction: column;
     align-items: center;
   }
@@ -156,11 +151,11 @@ const IntroduceImg = styled.img`
   border-radius: 50%;
   object-fit: cover;
   opacity: 0.9;
-  @media (${Sizes.tablet}) {
+  @media ${device.tablet} {
     margin-top: 50px;
   }
 
-  @media (${Sizes.mobile}) {
+  @media ${device.mobileL} {
     flex-direction: column;
     margin-top: 50px;
   }

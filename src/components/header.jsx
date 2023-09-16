@@ -1,18 +1,32 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
-export const sizes = {
-  mobile: `max-width: 480px`,
-  tablet: `max-width: 768px`,
-  desktop: `max-width: 1024px`,
-}
+import MenuBox from "./MenuBox"
+import device from "../styles/device"
 
 const Header = () => {
+  const [disabled, setDisabled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setDisabled(false)
+    }, 1200)
+
+    return () => clearTimeout(timer)
+  }, [disabled])
+  const disableMenu = () => {
+    setDisabled(!disabled)
+  }
+  const handleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
   return (
     <HeaderBar>
-      <Logo>JUTRONG</Logo>
-      <Menu>MENU</Menu>
+      <Logo onClick={handleMenu}>JUTRONG</Logo>
+      <MenuBox isMenuOpen={isMenuOpen} handleMenu={handleMenu} />
+      <MenuText onClick={handleMenu} isMenuOpen={isMenuOpen}>
+        MENU
+      </MenuText>
     </HeaderBar>
   )
 }
@@ -34,11 +48,11 @@ const HeaderBar = styled.header`
   transition: background-color 0.3s;
   z-index: 99;
 
-  @media (${sizes.tablet}) {
+  @media ${device.tablet} {
     width: 90%;
   }
 
-  @media (${sizes.mobile}) {
+  @media ${device.mobileL} {
     width: 95%;
   }
 `
@@ -48,6 +62,9 @@ const Menu = styled.button`
   cursor: pointer;
   appearance: none;
   font-weight: 600;
+`
+const MenuText = styled.div`
+  cursor: pointer;
 `
 const Logo = styled.a`
   font-weight: 600;

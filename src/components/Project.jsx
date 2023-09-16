@@ -3,12 +3,7 @@ import styled from "styled-components"
 import phone from "../images/phone.png"
 import skills from "../images/skill.png"
 import { Link } from "gatsby"
-
-export const Sizes = {
-  mobile: `max-width: 480px`,
-  tablet: `max-width: 768px`,
-  desktop: `max-width: 1024px`,
-}
+import device from "../styles/device"
 
 const Project = () => {
   return (
@@ -114,12 +109,12 @@ const ProjectServiceWrap = styled.div`
   margin-top: 15px;
   position: relative;
 
-  @media (${Sizes.tablet}) {
+  @media ${device.tablet} {
     flex-direction: column;
     margin-top: 20px;
   }
 
-  @media (${Sizes.mobile}) {
+  @media ${device.mobileL} {
     flex-direction: column;
   }
 `
@@ -176,11 +171,11 @@ const ProjectBtnSecond = styled.a`
 const Phone = styled.img`
   width: 200px;
   margin-right: 60px;
-  @media (${Sizes.tablet}) {
+  @media ${device.tablet} {
     margin-top: 40px;
   }
 
-  @media (${Sizes.mobile}) {
+  @media ${device.mobileL} {
     margin-top: 40px;
   }
 `
@@ -192,12 +187,12 @@ const ProjectContent = styled.div`
     display: flex;
   }
   span {
-    @media (${Sizes.tablet}) {
+    @media ${device.tablet} {
       justify-content: space-around;
       width: 90%;
     }
 
-    @media (${Sizes.mobile}) {
+    @media ${device.mobileL} {
       justify-content: space-around;
       width: 90%;
       font-size: 14px;
@@ -280,7 +275,7 @@ const Skills = styled.div`
   font-weight: 700;
   text-align: left;
   font-size: 25px;
-  @media (${Sizes.mobile}) {
+  @media ${device.mobileL} {
     width: 90%;
   }
 `
@@ -288,7 +283,7 @@ const SkillsImg = styled.img`
   margin: 30px;
   width: 70%;
   object-fit: cover;
-  @media (${Sizes.mobile}) {
+  @media ${device.mobileL} {
     width: 90%;
   }
 `
