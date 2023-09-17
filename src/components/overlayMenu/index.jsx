@@ -5,8 +5,8 @@ import { gsap } from "gsap"
 import * as S from "./style"
 
 const menus = [
-  { id: 1, path: "/", name: "resume" },
-  { id: 2, path: "/", name: "blog" },
+  { id: 1, path: "", name: "resume" },
+  { id: 2, path: "blog", name: "blog" },
   { id: 3, path: "/", name: "contact" },
 ]
 

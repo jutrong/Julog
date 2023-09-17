@@ -45,7 +45,6 @@ export const Head = () => <Seo title="Home" />
 export default IndexPage
 
 const Wrap = styled.div`
-  width: 1024px;
   margin: 0 auto;
 
   @media ${device.tablet} {

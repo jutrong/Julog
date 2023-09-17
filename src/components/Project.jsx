@@ -187,6 +187,7 @@ const ProjectContent = styled.div`
     display: flex;
   }
   span {
+    line-height: 1.5em;
     @media ${device.tablet} {
       justify-content: space-around;
       width: 90%;

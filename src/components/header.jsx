@@ -70,9 +70,10 @@ const Menu = styled.button`
 const MenuText = styled.div`
   cursor: pointer;
   color: ${props => (props.isMenuOpen ? "#fff" : `#191919`)};
+  font-weight: 900;
 `
 const Logo = styled.a`
-  font-weight: 600;
+  font-weight: 900;
   cursor: pointer;
   position: relative;
   transition: 0.5s;

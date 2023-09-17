@@ -24,10 +24,11 @@ const Layout = ({ children }) => {
 export default Layout
 
 const Container = styled.div`
-  max-width: 1900px;
+  max-width: 1024px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  font-family: "IBM Plex Sans", sans-serif;
 `
 
 const Inner = styled.div`
