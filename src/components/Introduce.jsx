@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 import ImogeImage from "../images/imoge.png"
-import MyImage from "../images/myImg2.png"
+import MyImage from "../images/myImgg.png"
 import device from "../styles/device"
 
 import { gsap } from "gsap"
