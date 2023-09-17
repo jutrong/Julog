@@ -190,12 +190,15 @@ const ProjectContent = styled.div`
     @media ${device.tablet} {
       justify-content: space-around;
       width: 90%;
+      margin-top: 20px;
     }
 
     @media ${device.mobileL} {
       justify-content: space-around;
       width: 90%;
-      font-size: 14px;
+      font-size: 13px;
+      margin-top: 20px;
+      line-height: 1.5em;
     }
   }
 `
@@ -277,6 +280,8 @@ const Skills = styled.div`
   font-size: 25px;
   @media ${device.mobileL} {
     width: 90%;
+    font-size: 14px;
+    font-weight: 900;
   }
 `
 const SkillsImg = styled.img`

@@ -32,11 +32,9 @@ const IndexPage = () => {
             <Skills />
             <Line />
             <Experience />
+            <Line />
           </Main>
         </Wrap>
-        <Footer>
-          <FooterContent></FooterContent>
-        </Footer>
       </Layout>
     </Provider>
   )
@@ -54,8 +52,8 @@ const Wrap = styled.div`
     width: 90%;
   }
 
-  @media ${device.mobileM} {
-    width: 93%;
+  @media ${device.mobileL} {
+    width: 96%;
   }
 `
 const Main = styled.main`
@@ -93,12 +91,4 @@ const Line = styled.div`
   height: 1px;
   background-color: black;
   opacity: 0.1;
-`
-const Footer = styled.div`
-  width: 100%;
-  background-color: #dfe4ea;
-  padding: 10px 0;
-`
-const FooterContent = styled.p`
-  text-align: center;
 `
