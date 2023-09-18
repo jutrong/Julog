@@ -6,7 +6,7 @@ const experienceData = [
     experienceName: "엘리스 코딩 SW 5기",
     experiencePeriod: " 2023.05.15 ~ 09.01 ",
     experienceExplain: `Software engineer 4개월 과정을 진행하면서 두 번의 팀프로젝트를 진행하였습니다.
-    2차 프로젝트 16팀 가운데 1등을하여 대상을 받았습니다.`,
+    최종 프로젝트 16팀 가운데 1등을하여 대상을 받았습니다.`,
   },
   {
     id: 2,

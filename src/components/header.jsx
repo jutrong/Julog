@@ -57,7 +57,7 @@ const HeaderBar = styled.header`
   }
 
   @media ${device.mobileL} {
-    width: 95%;
+    width: 85%;
   }
 `
 const Menu = styled.button`

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import ImogeImage from "../images/imoge.png"
 import MyImage from "../images/myImgg.png"
 import device from "../styles/device"
-
+import { Link } from "gatsby"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -72,13 +72,18 @@ const Introduce = () => {
         </IntroduceContent>
         <IntroduceContact>
           <ContactList>
-            📧 <ContactListA> jutrong@naver.com</ContactListA>
+            📧 <ContactListA> leek71358@gmail.com</ContactListA>
           </ContactList>
           <ContactList>
-            🏡 <ContactListA>Blog</ContactListA>
+            <Link to="https://velog.io/@jutrong">
+              🏡 <ContactListA>Blog</ContactListA>
+            </Link>
           </ContactList>
           <ContactList>
-            🐱 <ContactListA>Github</ContactListA>
+            🐱{" "}
+            <Link to="https://github.com/jutrong">
+              <ContactListA>Github</ContactListA>
+            </Link>
           </ContactList>
         </IntroduceContact>
       </IntroduceText>

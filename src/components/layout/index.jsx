@@ -29,6 +29,20 @@ const Container = styled.div`
   height: 100%;
   margin: 0 auto;
   font-family: "IBM Plex Sans", sans-serif;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(
+      rgb(254, 254, 254) 0%,
+      rgb(254, 254, 254) 40%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    z-index: 2;
+  }
 `
 
 const Inner = styled.div`

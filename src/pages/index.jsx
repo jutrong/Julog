@@ -20,23 +20,21 @@ const IndexPage = () => {
   }, [])
 
   return (
-    <Provider store={store}>
-      <Layout>
-        <Wrap>
-          <Header />
-          <Main>
-            <Introduce />
-            <Line />
-            <Project />
-            <Line />
-            <Skills />
-            <Line />
-            <Experience />
-            <Line />
-          </Main>
-        </Wrap>
-      </Layout>
-    </Provider>
+    <Layout>
+      <Wrap>
+        <Header />
+        <Main>
+          <Introduce />
+          <Line />
+          <Project />
+          <Line />
+          <Skills />
+          <Line />
+          <Experience />
+          <Line />
+        </Main>
+      </Wrap>
+    </Layout>
   )
 }
 

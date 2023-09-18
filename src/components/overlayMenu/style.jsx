@@ -40,12 +40,6 @@ export const MenuContainer = styled.div`
   @media ${device.desktop} {
     max-width: 960px;
   }
-  @media ${device.wideScreen} {
-    max-width: 1152px;
-  }
-  @media ${device.fullHd} {
-    max-width: 1244px;
-  }
 
   /* iOS only */
   @supports (-webkit-touch-callout: none) {
@@ -87,13 +81,9 @@ export const Menu = styled.ul`
 
   font-size: calc(8vw + 20px);
 
-  @media (min-width: 576px) {
+  @media (mobilel) {
     font-size: calc(6vw + 20px);
     margin-bottom: 2.4rem;
-  }
-
-  @media ${device.fullHd} {
-    font-size: 6rem;
   }
 `
 

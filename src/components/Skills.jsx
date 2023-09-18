@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { skillsData } from "../data/Skill"
+import device from "../styles/device"
 
 const Skills = () => {
   return (
@@ -48,5 +49,22 @@ const SkillsName = styled.h3`
 const SkillsExplain = styled.p`
   white-space: pre-line;
   font-size: 17px;
-  line-height: 1.6em;
+  line-height: 1.8em;
+  letter-spacing: 0.6px;
+  @media ${device.tablet} {
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 20px;
+    line-height: 1.8em;
+    letter-spacing: 0.6px;
+  }
+
+  @media ${device.mobileL} {
+    justify-content: space-around;
+    width: 90%;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.8em;
+    letter-spacing: 0.6px;
+  }
 `

@@ -2,8 +2,73 @@ import * as React from "react"
 import styled from "styled-components"
 import phone from "../images/phone.png"
 import skills from "../images/skill.png"
+import menu from "../images/menu.png"
 import { Link } from "gatsby"
 import device from "../styles/device"
+
+const projectsData = [
+  {
+    id: 1,
+    title: "당장 손민수",
+    description: [
+      `나의 최애의 아이템을 간편하게 찾을 수 있도록.
+      나의 최애 아이템을 구매할 수 있도록.
+      최애 아이템을 빠르고 쉽게.
+      혼자하는 덕질이 아닌 함께.
+      PWA기반의 이미지 중심 소셜 네트워크 서비스를 개발하였습니다.`,
+    ],
+    githubLink: "https://github.com/jutrong/sonminsoo-project",
+    liveLink: "https://kdt-sw-5-2-team11.elicecoding.com",
+    duration: {
+      start: "23.08.15",
+      end: "09.01",
+    },
+    people: {
+      frontend: 6,
+      backend: 1,
+    },
+    image: phone,
+    explanation: `PWA기반의 SNS서비스를 개발하는 팀프로젝트입니다. 
+    현재 리펙토링 진행중입니다.`,
+    implementedFeatures: [
+      `피드 페이지 CRUD
+      댓글 작성 삭제
+      피드 좋아요
+      multipart/form-data를 사용하여 이미지 업로드
+      아이템 검색`,
+    ],
+    skills: [
+      `React TypeScript  Styled-Components  PWA  Axios  JWT
+       Nest-Js Socket.io Prsima Redis AWS S3 postgres,`,
+    ],
+  },
+  {
+    id: 2,
+    title: "Personal blog",
+    description: [
+      `개발자는 개인 페이지 하나씩은 가져야지! 하면서 만든 gatsby기반 정적사이트
+      이력서 겸 포트폴리오 겸 블로그입니다.`,
+    ],
+    githubLink: "https://github.com/jutrong/Julog",
+    liveLink: "https://jutrong.netlify.app",
+    duration: {
+      start: "23.09.11",
+      end: "진행중",
+    },
+    people: {
+      frontend: 1,
+      backend: 0,
+    },
+    image: menu,
+    explanation: `블로그와 이력서를 하나의 웹페이지로 관리하기 위해 만든 개인 웹사이트입니다.`,
+    implementedFeatures: [
+      `Figma를 통한 디자인, 기획
+      Gatsby.js를 이용한 마크다운 블로그 포스팅 구현
+      Gsap을 활용한 애니메이션 효과`,
+    ],
+    skills: [`React Gatsby Styled-Components Gsap Netlify`],
+  },
+]
 
 const Project = () => {
   return (
@@ -16,59 +81,64 @@ const Project = () => {
       data-aos-anchor-placement="top-center"
     >
       <ProjectTitle>Projects.</ProjectTitle>
-      <ProjectName>당장 손민수</ProjectName>
-      <ProjectServiceWrap>
-        <ProjectService>
-          나의 최애의 아이템을 간편하게 찾을 수 있도록.
-          <br /> 나의 최애 아이템을 구매할 수 있도록. <br />
-          최애 아이템을 빠르고 쉽게.
-          <br /> 혼자하는 덕질이 아닌 함께.
-          <br /> <b>PWA기반의 이미지 중심 소셜 네트워크 서비스</b>를
-          개발하였습니다.
-          <ProductBtnWrap>
-            <Link to="https://github.com/jutrong/sonminsoo-project">
-              <ProjectBtnFirst>GITHUB</ProjectBtnFirst>
-            </Link>
-            <Link to="*">
-              <ProjectBtnSecond>PORTFOLIO</ProjectBtnSecond>
-            </Link>
-          </ProductBtnWrap>
-        </ProjectService>
-        <Phone src={phone} />
-      </ProjectServiceWrap>
-      <ProjectContent>
-        <Duration>
-          <DurationLeft>작업 기간</DurationLeft>
-          <DurationRight>23.08.15 - 09.01</DurationRight>
-        </Duration>
-        <People>
-          <PeopleLeft>참여 인원</PeopleLeft>
-          <PeopleRight>Frontend 6명 / Backend 1명</PeopleRight>
-        </People>
-        <Explan>
-          <ExplanLeft>관련 설명</ExplanLeft>
-          <ExplanRight>
-            PWA기반의 SNS서비스를 개발하는 팀프로젝트입니다. <br />
-            현재 리펙토링 진행중입니다.
-          </ExplanRight>
-        </Explan>
-        <Implement>
-          <ImplementLeft>구현 내용</ImplementLeft>
-          <ImplementRight>
-            <ImplementUl>
-              <ImplementLi>피드 페이지 CRUD</ImplementLi>
-              <ImplementLi>댓글 작성 삭제</ImplementLi>
-              <ImplementLi>피드 좋아요 </ImplementLi>{" "}
-              <ImplementLi>
-                multipart/form-data를 사용하여 이미지 업로드{" "}
-              </ImplementLi>
-              <ImplementLi>아이템 검색</ImplementLi>
-            </ImplementUl>
-          </ImplementRight>
-        </Implement>
-        <Skills>기술 스택</Skills>
-        <SkillsImg src={skills} />
-      </ProjectContent>
+      {projectsData.map(project => (
+        <React.Fragment key={project.name}>
+          <ProjectName>{project.title}</ProjectName>
+          <ProjectServiceWrap>
+            <ProjectService>
+              {project.description}
+              <ProductBtnWrap>
+                <ProjectBtnFirst
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GITHUB
+                </ProjectBtnFirst>
+                <ProjectBtnSecond
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Link
+                </ProjectBtnSecond>
+              </ProductBtnWrap>
+            </ProjectService>
+            <Phone src={project.image} />
+          </ProjectServiceWrap>
+          <ProjectContent>
+            <Duration>
+              <DurationLeft>작업 기간</DurationLeft>
+              <DurationRight>
+                {project.duration.start} - {project.duration.end}
+              </DurationRight>
+            </Duration>
+            <People>
+              <PeopleLeft>참여 인원</PeopleLeft>
+              <PeopleRight>
+                Frontend {project.people.frontend}명 / Backend{" "}
+                {project.people.backend}명
+              </PeopleRight>
+            </People>
+            <Explan>
+              <ExplanLeft>관련 설명</ExplanLeft>
+              <ExplanRight>{project.explanation}</ExplanRight>
+            </Explan>
+            <Implement>
+              <ImplementLeft>구현 내용</ImplementLeft>
+              <ImplementRight>
+                <ImplementUl>{project.implementedFeatures}</ImplementUl>
+              </ImplementRight>
+            </Implement>
+            <Skills>기술 스택</Skills>
+            <SkillsStack>
+              {project.skills.map((skill, index) => (
+                <SkillItem key={index}>{skill}</SkillItem>
+              ))}
+            </SkillsStack>
+          </ProjectContent>
+        </React.Fragment>
+      ))}
     </ProjectWrap>
   )
 }
@@ -85,17 +155,22 @@ const ProjectTitle = styled.h1`
   font-family: "IBM Plex Sans", sans-serif;
 `
 
-const ProjectName = styled.h2`
+const ProjectName = styled.span`
   text-align: left;
   font-size: 20px;
   font-weight: 700;
   position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
   &::before {
     content: "";
     bottom: 0;
     left: 0;
-    width: 92px;
+    width: auto;
     height: 8px;
+    display: inline-block;
+    padding-right: 100px;
     background-color: #d5f033;
     position: absolute;
     z-index: -1;
@@ -106,7 +181,8 @@ const ProjectServiceWrap = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
 
   @media ${device.tablet} {
@@ -126,6 +202,7 @@ const ProjectService = styled.p`
   text-align: left;
   line-height: 35px;
   letter-spacing: 0.46px;
+  white-space: pre-line;
 `
 const ProductBtnWrap = styled.div`
   display: flex;
@@ -182,12 +259,16 @@ const Phone = styled.img`
 const ProjectContent = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 120px;
+  letter-spacing: 0.6px;
+  line-height: 3em;
+
   div {
     margin: 20px 0;
     display: flex;
   }
   span {
-    line-height: 1.5em;
+    line-height: 2em;
     @media ${device.tablet} {
       justify-content: space-around;
       width: 90%;
@@ -252,6 +333,7 @@ const ExplanLeft = styled.span`
 const ExplanRight = styled.span`
   text-align: left;
   font-size: 18px;
+  white-space: pre-line;
 `
 
 const Implement = styled.div`
@@ -264,12 +346,10 @@ const ImplementLeft = styled.span`
   font-size: 25px;
   font-weight: 700;
 `
-const ImplementUl = styled.ul`
-  margin-left: 0;
+const ImplementUl = styled.p`
+  white-space: pre-line;
 `
-const ImplementLi = styled.li`
-  display: block;
-`
+
 const ImplementRight = styled.span`
   text-align: left;
   font-size: 18px;
@@ -279,17 +359,26 @@ const Skills = styled.div`
   font-weight: 700;
   text-align: left;
   font-size: 25px;
+
   @media ${device.mobileL} {
     width: 90%;
     font-size: 14px;
     font-weight: 900;
   }
 `
-const SkillsImg = styled.img`
-  margin: 30px;
-  width: 70%;
-  object-fit: cover;
+
+const SkillsStack = styled.p`
+  text-align: left;
+  /* font-weight: bold; */
+  margin-top: 20px;
+  font-size: 20px;
+  white-space: pre-line;
+  line-height: 3em;
+  word-spacing: 40px;
+  letter-spacing: 2px;
+  font-family: "IBM Plex Sans", sans-serif;
   @media ${device.mobileL} {
-    width: 90%;
+    word-spacing: 20px;
   }
 `
+const SkillItem = styled.span``

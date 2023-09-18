@@ -103,18 +103,17 @@ const Text = styled.div`
 `
 
 const Title = styled.h3`
-  display: -webkit-box;
+  /* display: -webkit-box; */
   color: ${({ theme }) => theme.$black};
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   word-break: keep-all;
-  text-overflow: ellipsis;
-  overflow-wrap: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  white-space: normal;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 const CreateAt = styled.span`
