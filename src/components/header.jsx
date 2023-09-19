@@ -21,9 +21,9 @@ const Header = () => {
   }
   return (
     <HeaderBar>
-      <Logo onClick={handleMenu} isMenuOpen={isMenuOpen}>
-        JUTRONG
-      </Logo>
+      <Link to="/resume">
+        <Logo isMenuOpen={isMenuOpen}>JUTRONG</Logo>
+      </Link>
       <MenuText
         onClick={handleMenu}
         disabled={isClicked}

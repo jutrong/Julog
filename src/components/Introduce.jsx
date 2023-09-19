@@ -52,7 +52,7 @@ const Introduce = () => {
             안녕하세요, <br />
             <Highlight className="highlight">항상 긍정적인 마인드셋</Highlight>
             으로 문제를 대하고,
-            <br /> 주체적인 학습을 통해 지속적으로 성장을 추구하는 신입 개발자
+            <br /> 함께 일했을 때 누구나 시너지 효과를 내는 긍정 개발자
             이주현입니다.
             <br />
             <Highlight className="highlight">
@@ -60,7 +60,6 @@ const Introduce = () => {
             </Highlight>
             라는 생각을 가지며, <br />
             새로운 기술을 습득하는 것에 대한 두려움이 적습니다.
-            <br /> 사용자 누구나 기대한 대로 작동하는 웹사이트를 선호합니다.
             <br />
             <Highlight className="highlight">
               {" "}

@@ -47,7 +47,7 @@ const projectsData = [
     title: "Personal blog",
     description: [
       `개발자는 개인 페이지 하나씩은 가져야지! 하면서 만든 gatsby기반 정적사이트
-      이력서 겸 포트폴리오 겸 블로그입니다.`,
+      이력서 포트폴리오 블로그를 한 곳에 `,
     ],
     githubLink: "https://github.com/jutrong/Julog",
     liveLink: "https://jutrong.netlify.app",
