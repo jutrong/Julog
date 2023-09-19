@@ -2,16 +2,19 @@ import React, { forwardRef } from "react"
 import styled from "styled-components"
 import device from "../styles/device"
 import Header from "../components/HeaderBar"
+import Layout from "../components/layout"
 const Contact = forwardRef((props, ref) => {
   return (
-    <div ref={ref}>
+    <Layout>
       <Header />
-      <Container>
-        <a href="mailto:leek71358@gmail.com">
-          <Mail className="mailto">leek71358@gmail.com</Mail>
-        </a>
-      </Container>
-    </div>
+      <div ref={ref}>
+        <Container>
+          <a href="mailto:leek71358@gmail.com">
+            <Mail className="mailto">leek71358@gmail.com</Mail>
+          </a>
+        </Container>
+      </div>
+    </Layout>
   )
 })
 
