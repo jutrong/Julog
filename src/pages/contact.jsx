@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react"
 import styled from "styled-components"
 import device from "../styles/device"
-import Header from "../components/Header"
+import Header from "../components/HeaderBar"
 const Contact = forwardRef((props, ref) => {
   return (
     <div ref={ref}>

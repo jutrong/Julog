@@ -4,7 +4,7 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import { Provider } from "react-redux"
 
-import Header from "../components/Header"
+import Header from "../components/HeaderBar"
 import Project from "../components/Project"
 import Skills from "../components/Skills"
 import Experience from "../components/Experience"
