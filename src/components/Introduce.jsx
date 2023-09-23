@@ -112,6 +112,7 @@ const SubTitle = styled.p`
   font-size: 40px;
   @media ${device.mobileL} {
     font-size: 0.7em;
+    line-height: 1.3em;
   }
 `
 const SubTitleText = styled.span`
@@ -149,7 +150,6 @@ const IntroduceContent = styled.div`
 
   @media ${device.mobileL} {
     flex-direction: column-reverse;
-    align-items: center;
   }
 `
 const Highlight = styled.span`
@@ -165,6 +165,7 @@ const Highlight = styled.span`
 const IntroduceContentText = styled.p`
   @media ${device.mobileL} {
     font-size: 0.75em;
+    text-align: center;
   }
 `
 const IntroduceImg = styled.img`

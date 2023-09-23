@@ -81,9 +81,8 @@ export const Menu = styled.ul`
 
   font-size: calc(8vw + 20px);
 
-  @media (mobilel) {
-    font-size: calc(6vw + 20px);
-    margin-bottom: 2.4rem;
+  @media ${device.mobileL} {
+    margin-top: -60px;
   }
 `
 

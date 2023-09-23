@@ -70,12 +70,17 @@ const PostList = styled.ul`
   @media ${device.tablet} {
     grid-template-columns: repeat(2, 1fr);
   }
+  @media ${device.mobileL} {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 250px;
+  }
 `
 
 const Post = styled.li`
   position: relative;
   overflow: hidden;
   object-fit: cover;
+  text-align: center;
 `
 
 const Loading = styled.div`

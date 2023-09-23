@@ -25,6 +25,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  @media ${device.tablet} {
+    margin-top: -150px;
+  }
 
   /* iOS only */
   @supports (-webkit-touch-callout: none) {
@@ -37,8 +40,11 @@ export const Mail = styled.div`
   font-size: 1.5rem;
   color: #191919;
   text-decoration: underline;
-
-  @media ${device.desktop} {
-    font-size: 5rem;
+  font-size: 5rem;
+  @media ${device.tablet} {
+    font-size: 3rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 2rem;
   }
 `
