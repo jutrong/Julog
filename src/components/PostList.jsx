@@ -5,6 +5,52 @@ import gsap from "gsap"
 import device from "../styles/device"
 
 const PostLists = ({ totalCount, edges }) => {
+  useEffect(() => {
+    const thumbnails = document.querySelectorAll('div[data-role="thumbnail"]')
+
+    thumbnails.forEach(thumbnail => {
+      const img = thumbnail.querySelector("img")
+
+      // 마우스 움직임 이벤트를 처리하는 함수
+      const handleMouseMove = e => {
+        const rect = thumbnail.getBoundingClientRect()
+        const mouseX = e.clientX - rect.left
+        const mouseY = e.clientY - rect.top
+
+        const centerX = rect.width / 2
+        const centerY = rect.height / 2
+
+        // 마우스의 위치에 따라 회전 각도를 계산
+        const rotateY = ((mouseX - centerX) / centerX) * 15 // 가로 회전
+        const rotateX = (-(mouseY - centerY) / centerY) * 15 // 세로 회전
+
+        gsap.to(img, {
+          duration: 0.5,
+          rotationY: rotateY,
+          rotationX: rotateX,
+          transformPerspective: 1000,
+          transformOrigin: "center center",
+          ease: "power2.out",
+        })
+      }
+
+      // 마우스가 요소 밖으로 나갈 때 원래 위치로 되돌리기
+      const handleMouseLeave = () => {
+        gsap.to(img, {
+          duration: 0.5,
+          rotationY: 0,
+          rotationX: 0,
+          transformPerspective: 1000,
+          transformOrigin: "center center",
+          ease: "power2.out",
+        })
+      }
+
+      thumbnail.addEventListener("mousemove", handleMouseMove)
+      thumbnail.addEventListener("mouseleave", handleMouseLeave)
+    })
+  }, [])
+
   return (
     <>
       <MainTitle>Blog</MainTitle>
@@ -21,7 +67,7 @@ const PostLists = ({ totalCount, edges }) => {
             <Post key={id} className="post">
               <Loading className="loading" />
               <Link to={`${slug}`}>
-                <Thumbnail>
+                <Thumbnail data-role="thumbnail">
                   <img src={thumbnail} alt="post thumbnail" />
                 </Thumbnail>
                 <Text>
@@ -95,10 +141,15 @@ const Loading = styled.div`
 `
 
 const Thumbnail = styled.div`
+  cursor: pointer;
   img {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    transition: transform 0.2s;
+  }
+  &:hover img {
+    transform: scale(1.05); // 마우스 오버 시 이미지를 조금 확대
   }
 `
 
