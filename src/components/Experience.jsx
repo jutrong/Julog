@@ -22,6 +22,7 @@ const Experience = () => {
       <ExperienceTitle>Experience.</ExperienceTitle>
       {experienceData.map(experience => (
         <ExperienceContent
+          key={experience.id}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"

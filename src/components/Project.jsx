@@ -82,7 +82,7 @@ const Project = () => {
     >
       <ProjectTitle>Projects.</ProjectTitle>
       {projectsData.map(project => (
-        <React.Fragment key={project.name}>
+        <React.Fragment key={project.id}>
           <ProjectName>{project.title}</ProjectName>
           <ProjectServiceWrap>
             <ProjectService>
