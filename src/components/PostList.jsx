@@ -21,8 +21,8 @@ const PostLists = ({ totalCount, edges }) => {
         const centerY = rect.height / 2
 
         // 마우스의 위치에 따라 회전 각도를 계산
-        const rotateY = ((mouseX - centerX) / centerX) * 15 // 가로 회전
-        const rotateX = (-(mouseY - centerY) / centerY) * 15 // 세로 회전
+        const rotateY = ((mouseX - centerX) / centerX) * 15
+        const rotateX = (-(mouseY - centerY) / centerY) * 15
 
         gsap.to(img, {
           duration: 0.5,

@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import { Provider } from "react-redux"
 
 import Header from "../components/HeaderBar"
 import Project from "../components/Project"
