@@ -149,7 +149,7 @@ const Thumbnail = styled.div`
     transition: transform 0.2s;
   }
   &:hover img {
-    transform: scale(1.05); // 마우스 오버 시 이미지를 조금 확대
+    transform: scale(1.05);
   }
 `
 
@@ -159,7 +159,6 @@ const Text = styled.div`
 `
 
 const Title = styled.h3`
-  /* display: -webkit-box; */
   color: ${({ theme }) => theme.$black};
   font-weight: bold;
   font-size: 1.5rem;

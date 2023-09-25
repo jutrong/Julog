@@ -117,11 +117,7 @@ const SubTitle = styled.p`
 `
 const SubTitleText = styled.span`
   color: #4834d4;
-  @media ${device.tablet} {
-    display: block;
-  }
-
-  @media ${device.mobileL} {
+  @media ${device.tablet}, ${device.mobileL} {
     display: block;
   }
 `
@@ -165,7 +161,6 @@ const Highlight = styled.span`
 const IntroduceContentText = styled.p`
   @media ${device.mobileL} {
     font-size: 0.75em;
-    text-align: center;
   }
 `
 const IntroduceImg = styled.img`
@@ -174,11 +169,7 @@ const IntroduceImg = styled.img`
   border-radius: 50%;
   object-fit: cover;
   opacity: 0.9;
-  @media ${device.tablet} {
-    margin-bottom: 50px;
-  }
-
-  @media ${device.mobileL} {
+  @media ${device.tablet}, ${device.mobileL} {
     margin-bottom: 50px;
   }
 `
@@ -187,10 +178,7 @@ const IntroduceContact = styled.ul`
   margin-left: 0;
   font-family: "IBM Plex Sans", sans-serif;
   margin-top: -20px;
-  @media ${device.tablet} {
-    margin-top: 50px;
-  }
-  @media ${device.mobileL} {
+  @media ${device.tablet}, ${device.mobileL} {
     margin-top: 50px;
   }
 `
