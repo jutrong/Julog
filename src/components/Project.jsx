@@ -6,7 +6,14 @@ import device from "../styles/device"
 import ProjectData from "../data/Project"
 
 const Project = () => (
-  <ProjectWrap>
+  <ProjectWrap
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-bottom"
+  >
     <ProjectTitle>Projects.</ProjectTitle>
     {ProjectData.map(project => (
       <React.Fragment key={project.id}>
