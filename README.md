@@ -1,99 +1,226 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# ReadMe
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# 당장 손민수
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+![phone.png](ReadMe%2037a9cb5b8b134874b9a05233fd49a356/phone.png)
 
-## 🚀 Quick start
+---
 
-1.  **Create a Gatsby site.**
+메인 이미지
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+배포 url
+계정
+배포판과 현재 코드 불일치 명시
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+페르소나
 
-1.  **Start developing.**
+## 목차
 
-    Navigate into your new site’s directory and start it up.
+[1. 팀 소개(역할 분담)](https://www.notion.so/1-24ca24f15d474258bea17bd93bcb90e0?pvs=21)
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+[2. 기술 및 개발 환경
+(프로젝트 기간, 프로젝트 목표, 사용기술<기술 선택 이유까지>, 개발환경, Git-Flow전략, 컨벤션)](https://www.notion.so/2-Git-Flow-5da107fc6122498eb964a1e8ff670234?pvs=21)
 
-1.  **Open the source code and start editing!**
+[3. 주요 기능](https://www.notion.so/3-8ccbaa52a57e4da4b650b2a686ae3512?pvs=21)
 
-    Your site is now running at `http://localhost:8000`!
+[4. 프로젝트 구조(폴더 구조)-](https://www.notion.so/4-dab7c72ffa1d4f72b7bb7b9d5bde1e8e?pvs=21)
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+[5. UI](https://www.notion.so/5-UI-a3fb3cdfd52f499296bf9fc67bab5150?pvs=21)
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+[6. 페이지 기능](https://www.notion.so/6-cd4f63e35d7543e6ac0fc22eb92a00ea?pvs=21)
 
-## 🚀 Quick start (Netlify)
+[7. 작업 관리(협업 방법)](https://www.notion.so/7-11212b33448747deb1c7781fc75b5902?pvs=21)
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+[8. 개선 방향(리팩토링)](https://www.notion.so/8-7d813c19d930420ab90bdcd1d0aefb06?pvs=21)
+[9. 팀 활동](https://www.notion.so/9-2a2e507bd96d46dbbda6a5b787888e08?pvs=21)
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+### 1. 팀 소개(역할 분담)
 
-## 🧐 What's inside?
+---
 
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+1. 신혜정
+   1. FE
+   2. 팀장/기획
+2. 최재혁
+   1. FE
+   2. 프론트 리더
+3. 이주현(팀원/FE)
+   1. FE
+   2.
+4. 용지은(팀원/FE)
+5. 김라온(팀원/FE)
+6. 유종훈(팀원/FE)
+7. 정충래(백엔드리더/BE)
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
+### 2. 기술 및 개발 환경
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+(프로젝트 기간, 프로젝트 목표, 사용기술<기술 선택 이유까지>, 개발환경, Git-Flow전략, 컨벤션)
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+---
 
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+1. ㅇㄻㄴㄻㄴㅇㄻㄴㅇㄹ
 
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### 3. 주요 기능
 
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+---
 
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+1. ㅇㄻㄴㅇㄻㄴㅇㄹ
 
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+### 4. 프로젝트 구조(폴더 구조)-
 
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+---
 
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+- 폴더 구조
+  ```jsx
+  📦src
+   ┣ 📂Context
+   ┣ 📂Routes
+   ┣ 📂api
+   ┣ 📂assets
+   ┃ ┣ 📂fonts
+   ┃ ┗ 📂images
+   ┃ ┃ ┣ 📂png
+   ┃ ┃ ┗ 📂svg
+   ┣ 📂components
+   ┃ ┣ 📂Chatting
+   ┃ ┣ 📂Feed
+   ┃ ┣ 📂FeedWrite
+   ┃ ┣ 📂Home
+   ┃ ┣ 📂HotFandom
+   ┃ ┣ 📂MyFandom
+   ┃ ┣ 📂MyPage
+   ┃ ┣ 📂Request
+   ┃ ┣ 📂SearchItem
+   ┃ ┣ 📂SignUp
+   ┃ ┣ 📂SonminsooItem
+   ┃ ┗ 📂common
+   ┃ ┃ ┣ 📂AlertModal
+   ┃ ┃ ┣ 📂BucketListModal
+   ┃ ┃ ┣ 📂FooterNavBar
+   ┃ ┃ ┣ 📂HeaderBar
+   ┃ ┃ ┣ 📂ThrottlingButton
+   ┣ 📂constant
+   ┣ 📂elements
+   ┣ 📂hooks
+   ┣ 📂pages
+   ┃ ┣ 📂Chatting
+   ┃ ┣ 📂Feed
+   ┃ ┣ 📂FeedWrite
+   ┃ ┣ 📂Home
+   ┃ ┣ 📂HotFandom
+   ┃ ┣ 📂InitInfo
+   ┃ ┣ 📂Login
+   ┃ ┣ 📂MyFandom
+   ┃ ┣ 📂MyPage
+   ┃ ┣ 📂Request
+   ┃ ┣ 📂SearchItem
+   ┃ ┣ 📂Settings
+   ┃ ┣ 📂Signup
+   ┃ ┣ 📂SonminsooItem
+   ┣ 📂styles
+   ┣ 📂types
+   ┣ 📂utils
+   ┣ 📜App.tsx
+   ┣ 📜Router.tsx
+   ┣ 📜index.tsx
+   ┣ 📜service-worker.ts
+   ┣ 📜serviceWorkerRegistration.ts
+   ┗ 📜setupProxy.js
+  ```
+- Git 충돌 방지를 위해 Routes 폴더를 두고 각자 맡은 페이지의 route를 수정할 수 있게 하였습니다.
 
-1.  **`README.md`**: A text file containing useful reference information about your project.
+```
+📦Routes
+ ┣ 📜Chatting.route.tsx
+ ┣ 📜Feed.route.tsx
+ ┣ 📜FeedWrite.route.tsx
+ ┣ 📜InitInfo.route.tsx
+ ┣ 📜Login.route.tsx
+ ┣ 📜MyFandom.route.tsx
+ ┣ 📜MyPage.route.tsx
+ ┣ 📜Request.route.tsx
+ ┣ 📜SearchItem.route.tsx
+ ┣ 📜Settings.route.tsx
+ ┣ 📜Signup.route.tsx
+ ┣ 📜Sonminsoo.route.tsx
+ ┗ 📜index.tsx
+```
 
-## 🎓 Learning Gatsby
+- 컴포넌트와 스타일 컴포넌트 구분을 위해 스타일 파일을 분리하였습니다.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+```
+📦HotFandom
+ ┣ 📂style
+ ┃ ┣ 📜FandomRanking.style.tsx
+ ┃ ┣ 📜HotFamdomHeader.style.tsx
+ ┃ ┗ 📜HotFandomCircle.style.tsx
+ ┣ 📜FandomRanking.tsx
+ ┣ 📜HotFandomCircle.tsx
+ ┗ 📜HotFandomHeader.tsx
+```
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+```jsx
+return (
+  <S.ContentHeaderContainer>
+    <S.MyFandomHeaderText>마이 팬덤</S.MyFandomHeaderText>
+    <S.CreateBtn onClick={() => navigate("/myfandom/createfandom")}>
+      + 새 팬덤 만들기
+    </S.CreateBtn>
+  </S.ContentHeaderContainer>
+)
+```
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+### 5. UI
 
-## 💫 Deploy
+---
 
-[Build, Deploy, and Host On Netlify](https://netlify.com)
+1. ㅁㅇㄻㄴㅇㄹ
 
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
+### 6. 페이지 기능
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+---
+
+1. ㄴㄹㅇㄴㅁㅇㄻㄴㅇ
+
+### 7. 작업 관리(협업 방법)
+
+---
+
+## [ Notion ]
+
+- 팀 노션 워크스페이스에서 작업 흐름을 공유하였습니다.
+
+![그림1.png](ReadMe%2037a9cb5b8b134874b9a05233fd49a356/%25EA%25B7%25B8%25EB%25A6%25BC1.png)
+
+## [ Figma ]
+
+- 디자인과 기획은 모두 Figma를 통해 진행했습니다.
+- 피그마 댓글기능을 통해서 기능, 디자인에 관한 피드백을 주고 받았습니다.
+
+[https://www.figma.com/file/dmFBG0e6dFjDnUrxWbkKgy/%EB%8B%B9%EC%9E%A5-%EC%86%90%EB%AF%BC%EC%88%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=236%3A3330&mode=design&t=0uSi7Oj3E6bIaoXY-1](https://www.figma.com/file/dmFBG0e6dFjDnUrxWbkKgy/%EB%8B%B9%EC%9E%A5-%EC%86%90%EB%AF%BC%EC%88%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=236%3A3330&mode=design&t=0uSi7Oj3E6bIaoXY-1)
+
+## [ Swagger ]
+
+- 스웨거를 통해 api 문서를 자동화 하였습니다.
+
+## [ Gather ]
+
+- 작업하는 시간에는 게더타운에 접속하여 소통을 원활히 하였습니다.
+- 효율적인 협업을 위해 애자일 방법론을 사용하였습니다.
+- 매일 10~11시 스크럼을 통해 현재 진행상황을 공유하여 개발 일정을 조율하였습니다.
+
+![Untitled](ReadMe%2037a9cb5b8b134874b9a05233fd49a356/Untitled.png)
+
+### 8. 개선 방향(리팩토링)
+
+---
+
+1. ㅇㄴㄻㅇㄹ
+
+### 9. 팀 활동
+
+---
+
+![Untitled](ReadMe%2037a9cb5b8b134874b9a05233fd49a356/Untitled%201.png)
+
+![Untitled](ReadMe%2037a9cb5b8b134874b9a05233fd49a356/Untitled%202.png)
