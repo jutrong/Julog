@@ -2,7 +2,7 @@
 
 # 📝 나만의 Gatsby 블로그 l l 이력서
 
-![Untitled](%E1%84%80%E1%85%A2%E1%86%BA%E1%84%8E%E1%85%B3%E1%84%87%E1%85%B5%20Read%20Me%20ab7178627a5048589801654444a12606/Untitled.png)
+<img width="635" alt="Untitled" src="https://github.com/jutrong/Julog/assets/113658811/f0d4e2a6-2067-4e4b-893d-38f4de9b219d">
 
 배포 URL : [https://jutrong.netlify.app/](https://jutrong.netlify.app/)
 
@@ -31,11 +31,11 @@
 
 ### Home
 
-![Untitled-3.gif](%E1%84%80%E1%85%A2%E1%86%BA%E1%84%8E%E1%85%B3%E1%84%87%E1%85%B5%20Read%20Me%20ab7178627a5048589801654444a12606/Untitled-3.gif)
+![Untitled-3](https://github.com/jutrong/Julog/assets/113658811/1ccfc497-5f82-4db8-877a-febe966624b5)
 
 ### Menu
 
-![화면 기록 2023-10-08 오후 6.50.22.gif](%E1%84%80%E1%85%A2%E1%86%BA%E1%84%8E%E1%85%B3%E1%84%87%E1%85%B5%20Read%20Me%20ab7178627a5048589801654444a12606/%25ED%2599%2594%25EB%25A9%25B4_%25EA%25B8%25B0%25EB%25A1%259D_2023-10-08_%25EC%2598%25A4%25ED%259B%2584_6.50.22.gif)
+![%ED%99%94%EB%A9%B4_%EA%B8%B0%EB%A1%9D_2023-10-08_%EC%98%A4%ED%9B%84_6 50 22](https://github.com/jutrong/Julog/assets/113658811/ac8782d9-2e23-4dff-93a5-a3ff84f5198d)
 
 ### Blog
 
