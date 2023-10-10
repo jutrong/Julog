@@ -1,7 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
 
-import { Link } from "gatsby"
 import device from "../styles/device"
 import ProjectData from "../data/Project"
 
@@ -169,6 +168,11 @@ const ContentWrap = styled.div`
     margin: 30px 0;
     display: flex;
     align-items: start;
+    @media ${device.mobileL} {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 `
 
@@ -196,7 +200,6 @@ const SkillsTitle = styled.div`
   font-size: 25px;
   @media ${device.mobileL} {
     width: 90%;
-    font-size: 14px;
     font-weight: 900;
   }
 `
