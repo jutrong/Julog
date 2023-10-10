@@ -23,6 +23,9 @@ const Project = () => (
             <ButtonWrap>
               <ProjectButton href={project.githubLink}>GITHUB</ProjectButton>
               <ProjectButton href={project.liveLink}>Link</ProjectButton>
+              {project.blogLink && (
+                <ProjectButton href={project.blogLink}>Blog</ProjectButton>
+              )}
             </ButtonWrap>
           </DescriptionWithBtn>
           <Image src={project.image} />

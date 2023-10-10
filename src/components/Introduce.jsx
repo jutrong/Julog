@@ -50,7 +50,7 @@ const Introduce = () => {
         <IntroduceContent>
           <IntroduceContentText>
             안녕하세요, <br />
-            <Highlight className="highlight">항상 긍정적인 마인드셋</Highlight>
+            <Highlight className="highlight">항상 긍정적인 마음가짐</Highlight>
             으로 문제를 대하고,
             <br /> 함께 일했을 때 누구나 시너지 효과를 내는 긍정 개발자
             이주현입니다.

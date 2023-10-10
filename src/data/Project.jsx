@@ -15,6 +15,7 @@ const projectsData = [
     ],
     githubLink: "https://github.com/jutrong/sonminsoo-project",
     liveLink: "https://kdt-sw-5-2-team11.elicecoding.com",
+    blogLink: "https://jutrong.netlify.app/blog/sonminsoo1/",
     duration: {
       start: "23.08.15",
       end: "09.01",
@@ -47,6 +48,7 @@ const projectsData = [
     ],
     githubLink: "https://github.com/jutrong/Julog",
     liveLink: "https://jutrong.netlify.app",
+    blogLink: "",
     duration: {
       start: "23.09.11",
       end: "진행중",
