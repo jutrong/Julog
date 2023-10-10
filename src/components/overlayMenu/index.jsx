@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react"
 import useMenu from "../../hooks/useMenu"
+import Path from "../../data/Path"
 import { Link } from "gatsby"
 import { gsap } from "gsap"
 import * as S from "./style"
@@ -52,13 +53,13 @@ const OverlayMenu = () => {
       </S.Overlay>
       <S.MenuContainer ref={menuContainerRef}>
         <S.Menu isMenuActive={isMenuActive}>
-          {menus.map(({ id, path, name }) => (
+          {Path.map(({ id, path, menu }) => (
             <li key={id} className="overlay-menu" onClick={onClickLink}>
               <Link href={`/${path}`}>
                 <a>
                   <S.TextWrap>
-                    <S.FillText>{name}</S.FillText>
-                    <S.StrokeText>{name}</S.StrokeText>
+                    <S.FillText>{menu}</S.FillText>
+                    <S.StrokeText>{menu}</S.StrokeText>
                   </S.TextWrap>
                 </a>
               </Link>

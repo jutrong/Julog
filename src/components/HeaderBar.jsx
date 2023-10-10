@@ -21,7 +21,7 @@ const Header = () => {
   }
   return (
     <HeaderBar>
-      <Link to="/resume">
+      <Link to="/">
         <Logo isMenuOpen={isMenuOpen}>JUTRONG</Logo>
       </Link>
       <MenuText

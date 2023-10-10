@@ -166,8 +166,9 @@ const ContentWrap = styled.div`
   letter-spacing: 0.6px;
   line-height: 3em;
   div {
-    margin: 20px 0;
+    margin: 30px 0;
     display: flex;
+    align-items: start;
   }
 `
 

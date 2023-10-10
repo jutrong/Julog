@@ -35,7 +35,7 @@ const projectsData = [
     ],
     skills: [
       `React TypeScript  Styled-Components  PWA  Axios  JWT
-       Nest-Js Socket.io Prsima Redis AWS S3 postgres,`,
+       Nest-Js Socket.io Prsima Redis postgres,`,
     ],
   },
   {

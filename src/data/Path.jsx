@@ -1,17 +1,17 @@
 const paths = [
   {
     id: 1,
-    path: "/resume",
+    path: "",
     menu: "Resume",
   },
   {
     id: 2,
-    path: "/blog",
+    path: "blog",
     menu: "Blog",
   },
   {
     id: 3,
-    path: "/contact",
+    path: "contact",
     menu: "Contact",
   },
 ]
