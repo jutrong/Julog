@@ -11,8 +11,8 @@ const paths = [
   },
   {
     id: 3,
-    path: "contact",
-    menu: "Contact",
+    path: "portfolio",
+    menu: "Portfolio",
   },
 ]
 

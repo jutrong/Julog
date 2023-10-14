@@ -5,12 +5,6 @@ import { Link } from "gatsby"
 import { gsap } from "gsap"
 import * as S from "./style"
 
-const menus = [
-  { id: 1, path: "resume", name: "resume" },
-  { id: 2, path: "blog", name: "blog" },
-  { id: 3, path: "contact", name: "contact" },
-]
-
 const OverlayMenu = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
   const [isPlayOnce, setIsPlayOnce] = useState(false)

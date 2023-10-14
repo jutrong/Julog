@@ -1,0 +1,35 @@
+import sonminsoo from "../images/sonminsoo.png"
+import favicon from "../images/favi.svg"
+import blog from "../images/menu1.png"
+import favicon2 from "../images/favi2.svg"
+
+const portfoliodata = [
+  {
+    id: 1,
+    title: "당장-손민수",
+    period: "2023·08·15 → 2023·09·02",
+    skills: ["React", "Typescript", "Styled-components", "PWA"],
+    links: {
+      github: "https://github.com/jutrong/sonminsoo-project",
+      blog: "https://jutrong.netlify.app/blog/sonminsoo1/",
+    },
+    categories: ["팀프로젝트"],
+    image: sonminsoo,
+    favicon: favicon,
+  },
+  {
+    id: 2,
+    title: "Personal-Blog",
+    period: "2023·09·11 → 2023·10·09",
+    skills: ["Gatsby", "Styled-components", "Gasp", "Netlify"],
+    links: {
+      github: "https://github.com/jutrong/Julog",
+      link: "https://jutrong.netlify.app/",
+    },
+    categories: ["개인 프로젝트"],
+    image: blog,
+    favicon: favicon2,
+  },
+]
+
+export default portfoliodata
