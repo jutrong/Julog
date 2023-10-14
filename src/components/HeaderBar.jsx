@@ -55,6 +55,9 @@ const HeaderBar = styled.header`
   @media ${device.tablet} {
     width: 90%;
   }
+  @media ${device.labtop} {
+    width: 90%;
+  }
 
   @media ${device.mobileL} {
     width: 85%;

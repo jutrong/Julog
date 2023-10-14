@@ -62,6 +62,9 @@ export default Portfolio
 const PortfolioWrap = styled.div`
   max-width: 80%;
   margin: 150px auto;
+  @media ${device.mobileL} {
+    height: auto;
+  }
 `
 const Title = styled.h2`
   font-size: 35px;
@@ -81,6 +84,11 @@ const PortfolioBox = styled.div`
   display: flex;
   gap: 20px;
   margin: 40px 30px;
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    margin: 40px 0;
+  }
 `
 const Projects = styled.div`
   width: 50%;
@@ -92,6 +100,14 @@ const Projects = styled.div`
     background-color: #d3d3d32b;
   }
   transition: 0.4s;
+  @media ${device.tablet} {
+    height: 100%;
+  }
+  @media ${device.mobileL} {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+  }
 `
 const Project = styled.div`
   width: 100%;
