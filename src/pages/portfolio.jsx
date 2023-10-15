@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import device from "../styles/device"
 import Layout from "../components/layout"
@@ -14,41 +15,43 @@ const Portfolio = () => {
         <PortfolioBox>
           {portfolioData.map(project => (
             <Projects>
-              <Project key={project.id}>
-                <ProjectsImg src={project.image} />
-                <ProjectContent>
-                  <ProjectTitle>
-                    <ProjectTitleImg src={project.favicon} />
-                    <ProjectName>{project.title}</ProjectName>
-                  </ProjectTitle>
-                  <ProjectPeriod>{project.period}</ProjectPeriod>
-                  <UseSkills>
-                    {project.skills.map((skill, index) => (
-                      <Skill key={index}>{skill}</Skill>
-                    ))}
-                  </UseSkills>
-                  <AboutLinks>
-                    <Links href={project.links.github} target="_blank">
-                      Github.com
-                    </Links>
-                    {project.links.link && (
+              <Link to={project.path}>
+                <Project key={project.id}>
+                  <ProjectsImg src={project.image} />
+                  <ProjectContent>
+                    <ProjectTitle>
+                      <ProjectTitleImg src={project.favicon} />
+                      <ProjectName>{project.title}</ProjectName>
+                    </ProjectTitle>
+                    <ProjectPeriod>{project.period}</ProjectPeriod>
+                    <UseSkills>
+                      {project.skills.map((skill, index) => (
+                        <Skill key={index}>{skill}</Skill>
+                      ))}
+                    </UseSkills>
+                    <AboutLinks>
                       <Links href={project.links.github} target="_blank">
-                        Link
+                        Github.com
                       </Links>
-                    )}
-                    {project.links.blog && (
-                      <Links href={project.links.blog} target="_blank">
-                        Blog
-                      </Links>
-                    )}
-                  </AboutLinks>
-                  <Categorys>
-                    {project.categories.map((category, index) => (
-                      <Category key={index}>{category}</Category>
-                    ))}
-                  </Categorys>
-                </ProjectContent>
-              </Project>
+                      {project.links.link && (
+                        <Links href={project.links.github} target="_blank">
+                          Link
+                        </Links>
+                      )}
+                      {project.links.blog && (
+                        <Links href={project.links.blog} target="_blank">
+                          Blog
+                        </Links>
+                      )}
+                    </AboutLinks>
+                    <Categorys>
+                      {project.categories.map((category, index) => (
+                        <Category key={index}>{category}</Category>
+                      ))}
+                    </Categorys>
+                  </ProjectContent>
+                </Project>
+              </Link>
             </Projects>
           ))}
         </PortfolioBox>

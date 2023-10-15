@@ -16,6 +16,7 @@ const portfoliodata = [
     categories: ["팀프로젝트"],
     image: sonminsoo,
     favicon: favicon,
+    path: "/sonminsoo",
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const portfoliodata = [
     categories: ["개인 프로젝트"],
     image: blog,
     favicon: favicon2,
+    path: "/blog",
   },
 ]
 
