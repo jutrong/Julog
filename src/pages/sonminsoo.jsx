@@ -7,9 +7,17 @@ import favi from "../images/favi.svg"
 import serviceImg from "../images/minsooservice.png"
 import on from "../images/toggle.svg"
 import off from "../images/toggleoff.svg"
+import feedText from "../images/feedtext.png"
+import time from "../images/time.png"
+import imageCode from "../images/imagecode.png"
+import hashtag from "../images/hashtag.png"
+import formData from "../images/formdata.png"
 
 const Sonminsoo = () => {
   const [isPageImg, setIsPageImg] = useState(false)
+  const [isFeedTextCodeOpen, setIsFeedTextCodeOpen] = useState(false)
+  const [isTimeCodeOpen, setIsTimeCodeOpen] = useState(false)
+  const [isImageCodeOpen, setIsImageCodeOpen] = useState(false)
 
   return (
     <>
@@ -93,6 +101,91 @@ const Sonminsoo = () => {
               <br /> 댓글·좋아요 기능
               <br />글 작성 시간 함수
             </MyPartDetail>
+            <WhatDidIdo>💁 What did I do?</WhatDidIdo>
+            <WhatDidIdoWrap>
+              <WhatDidIdoTitle>
+                <WhatDidIdoIcon>🏷️</WhatDidIdoIcon> slice함수를 사용하여 작성글
+                내용길이 설정하여 펼치고 닫기
+              </WhatDidIdoTitle>
+              <WhatDidIdoContent>
+                - 글 내용의 길이를 제한하고, 텍스트를 펼칠 수 있도록 만드는데
+                slice 함수를 사용하였습니다.
+              </WhatDidIdoContent>
+              <WhatDidIdoCodeWrap>
+                <WhatDidIdoCodeToggle
+                  onClick={() => setIsFeedTextCodeOpen(!isFeedTextCodeOpen)}
+                >
+                  ✒︎ Code
+                </WhatDidIdoCodeToggle>
+                {isFeedTextCodeOpen && <WhatDidIdoCodeImage src={feedText} />}
+              </WhatDidIdoCodeWrap>
+            </WhatDidIdoWrap>
+            <WhatDidIdoWrap>
+              <WhatDidIdoTitle>
+                <WhatDidIdoIcon>⏱️</WhatDidIdoIcon> 피드 작성 시간을 표시해주는
+                uitl 공용함수 제작
+              </WhatDidIdoTitle>
+              <WhatDidIdoContent>
+                - 주어진 날짜와 현재 시간 사이의 시간 차이를 계산하고, 그 차이에
+                따라 "방금 전", "n분 전", "n시간 전" 등을 반환하여 상대적인 시간
+                표시를 하였습니다.
+              </WhatDidIdoContent>
+              <WhatDidIdoCodeWrap>
+                <WhatDidIdoCodeToggle
+                  onClick={() => setIsTimeCodeOpen(!isTimeCodeOpen)}
+                >
+                  ✒︎ Code
+                </WhatDidIdoCodeToggle>
+                {isTimeCodeOpen && <WhatDidIdoCodeImage src={time} />}
+              </WhatDidIdoCodeWrap>
+            </WhatDidIdoWrap>
+            <WhatDidIdoWrap>
+              <WhatDidIdoTitle>
+                <WhatDidIdoIcon>📝</WhatDidIdoIcon> 피드 작성하기 버튼 클릭 시
+                이미지 등록
+              </WhatDidIdoTitle>
+              <WhatDidIdoContent>
+                - input type =“file” , accept=“image/*”을 통해 device의 이미지
+                파일을 선택할 수 있게 하였습니다.
+                <br /> 선택한 파일의 값을 <strong>useNavigate훅</strong>을
+                사용하여 상태 값을 넘겨주고, 페이지 이동을 시키고
+                <strong>useLocation훅</strong>을 통해 값들을 받아와
+                사용하였습니다.
+                <br />
+                <br />
+                <br />
+                피드 작성하기와 수정하기 화면을 state값에 따라 비활성화 처리
+                하였습니다. $updatePage이 true일 경우에는 팬덤선택, 아티스트
+                항목에 입력 하지 못합니다.
+              </WhatDidIdoContent>
+              <WhatDidIdoCodeWrap>
+                <WhatDidIdoCodeToggle
+                  onClick={() => setIsImageCodeOpen(!isImageCodeOpen)}
+                >
+                  ✒︎ Code
+                </WhatDidIdoCodeToggle>
+                {isImageCodeOpen && <WhatDidIdoCodeImage src={imageCode} />}
+              </WhatDidIdoCodeWrap>
+            </WhatDidIdoWrap>
+            <WhatDidIdoWrap>
+              <WhatDidIdoTitle>
+                <WhatDidIdoIcon>#️⃣</WhatDidIdoIcon> hasstag를 입력하고 가공하여
+                서버에 배열형식으로 전달
+              </WhatDidIdoTitle>
+              <WhatDidIdoContent>
+                <WhatDidIdoCodeImage src={hashtag} />
+                - #로 시작하며, 그 뒤에 영문 대소문자, 한글 글자가 오는 정규
+                표현식 <br />
+                - match 함수가 해시태그를 찾지 못하면, ?. 연산자를 사용하여 map
+                함수를 호출하지 않고 [] 빈 배열을 반환 <br />
+                - .slice(1)을 사용하여 해시태그 문자열에서 첫 번째 문자(해시
+                기호)를 제거 추출된 해시태그는 배열로 저장되며, 이 배열은
+                hashtagss 변수에 할당 <br />- 이 해쉬태그를
+                multipart/form-data로 전송하기 위해서는 배열에 있는 각
+                해시태그를 FormData 객체에 추가하는 작업을 하였습니다.
+                <WhatDidIdoCodeImage src={formData} />
+              </WhatDidIdoContent>
+            </WhatDidIdoWrap>
           </SonminsooPart>
         </SonminsooWrap>
       </Layout>
@@ -209,4 +302,42 @@ const MyPartDetail = styled.p`
     left: -20px;
     top: 6px;
   }
+`
+const WhatDidIdo = styled.h2`
+  margin-top: 50px;
+  margin-bottom: 20px;
+`
+const WhatDidIdoWrap = styled.div`
+  border: 1px dashed #dddddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  margin: 40px 10px;
+`
+const WhatDidIdoIcon = styled.p`
+  margin-right: 4px;
+  display: inline-block;
+`
+const WhatDidIdoTitle = styled.h3`
+  letter-spacing: 0.5px;
+  font-size: 21px;
+`
+const WhatDidIdoContent = styled.p`
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.8em;
+`
+const WhatDidIdoCodeWrap = styled.div`
+  margin-top: 20px;
+  font-weight: 500;
+  cursor: pointer;
+`
+const WhatDidIdoCodeToggle = styled.p`
+  font-weight: 600;
+`
+
+const WhatDidIdoCodeImage = styled.img`
+  margin-top: 40px;
+  border-radius: 10px;
 `
