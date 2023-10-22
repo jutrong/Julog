@@ -14,7 +14,7 @@ const projectsData = [
       PWA기반의 이미지 중심 소셜 네트워크 서비스를 개발하였습니다.`,
     ],
     githubLink: "https://github.com/jutrong/sonminsoo-project",
-    liveLink: "https://kdt-sw-5-2-team11.elicecoding.com",
+    liveLink: "https://jutrong.netlify.app/sonminsoo/",
     blogLink: "https://jutrong.netlify.app/blog/sonminsoo1/",
     duration: {
       start: "23.08.15",
