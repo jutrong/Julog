@@ -63,7 +63,7 @@ const projectsData = [
       `Figma를 통한 디자인, 기획
       Gatsby.js를 이용한 마크다운 블로그 포스팅 구현
       Gsap을 활용한 애니메이션 효과
-      Google Analytics 적용`,
+      `,
     ],
     skills: [`React Gatsby Styled-Components Gsap Netlify`],
   },
