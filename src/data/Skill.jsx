@@ -38,6 +38,6 @@ export const skillsData = [
     id: 7,
     skillsName: "Progressive Web App (PWA)",
     skillsExplain: `웹 애플리케이션을 모바일 및 데스크톱에서 네이티브 앱처럼 동작하게 만드는 PWA 기술에 익숙합니다. 
-    Service Worker를 활용하여 오프라인 경험을 제공하였으며, 푸시 알림 기능 구현 경험이 있습니다.`,
+    `,
   },
 ]
