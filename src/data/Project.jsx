@@ -25,8 +25,7 @@ const projectsData = [
       backend: 1,
     },
     image: phone,
-    explanation: `PWA기반의 SNS서비스를 개발하는 팀프로젝트입니다. 
-    현재 리펙토링 진행중입니다.`,
+    explanation: `PWA기반의 SNS서비스를 개발하는 팀프로젝트입니다.`,
     implementedFeatures: [
       `피드 페이지 CRUD
       댓글 작성 삭제
