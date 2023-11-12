@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import PostList from "../components/PostList"
 import store from "../modules/Store"
 import { Provider } from "react-redux"
+import Seo from "../components/seo"
 
 const Blog = ({ data }) => {
   const { totalCount, edges } = data.allMarkdownRemark
@@ -17,6 +18,7 @@ const Blog = ({ data }) => {
 }
 
 export default Blog
+export const Head = () => <Seo title="Julog" />
 
 export const query = graphql`
   query getPosts {

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import device from "../styles/device"
 import Layout from "../components/layout"
 import portfolioData from "../data/Portfolio"
+import Seo from "../components/seo"
 
 const Portfolio = () => {
   return (
@@ -61,6 +62,7 @@ const Portfolio = () => {
 }
 
 export default Portfolio
+export const Head = () => <Seo title="Portfolio" />
 
 const PortfolioWrap = styled.div`
   max-width: 80%;
