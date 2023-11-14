@@ -62,7 +62,7 @@ const PostLists = ({ totalCount, edges }) => {
             frontmatter: { title, date, thumbnail, summary },
             fields: { slug },
           } = node
-
+          //TODO: StaticImage 사용해보기
           return (
             <Post key={id} className="post">
               <Loading className="loading" />
