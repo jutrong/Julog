@@ -30,7 +30,7 @@ const portfoliodata = [
     categories: ["개인 프로젝트"],
     image: blog,
     favicon: favicon2,
-    path: "/blog",
+    path: "https://www.notion.so/Julog-773341a7e4714a4797693102a2542344?pvs=4",
   },
 ]
 

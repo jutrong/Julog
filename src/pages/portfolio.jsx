@@ -16,7 +16,7 @@ const Portfolio = () => {
         <PortfolioBox>
           {portfolioData.map(project => (
             <Projects>
-              <Link to={project.path}>
+              <Link to={project.path} target="_blank">
                 <Project key={project.id}>
                   <ProjectsImg src={project.image} />
                   <ProjectContent>
