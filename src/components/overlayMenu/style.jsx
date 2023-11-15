@@ -79,7 +79,7 @@ export const Menu = styled.ul`
     transform: translateY(-100%);
   }
 
-  font-size: calc(8vw + 20px);
+  font-size: 100px;
 
   @media ${device.mobileL} {
     margin-top: -60px;

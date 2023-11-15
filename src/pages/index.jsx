@@ -85,6 +85,6 @@ const Line = styled.div`
   margin: 100px auto;
   width: 80%;
   height: 1px;
-  background-color: black;
+  background-color: #00000042;
   opacity: 0.1;
 `

@@ -35,7 +35,7 @@ const SkillsWrap = styled.div`
 const SkillsTitle = styled.h2`
   font-family: "IBM Plex Sans", sans-serif;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 70px;
 `
 const SkillsContent = styled.div`
@@ -43,7 +43,7 @@ const SkillsContent = styled.div`
   margin-bottom: 70px;
 `
 const SkillsName = styled.h3`
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Karla", sans-serif;
   margin-bottom: 20px;
 `
 const SkillsExplain = styled.p`

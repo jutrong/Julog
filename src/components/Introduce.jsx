@@ -124,10 +124,12 @@ const SubTitleText = styled.span`
 const IntroduceText = styled.div`
   text-align: left;
   width: 100%;
+  font-size: 15px;
 `
 const IntroduceTitle = styled.h2`
   margin-top: 120px;
   font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
 `
 const IntroduceContent = styled.div`
   margin-top: 50px;

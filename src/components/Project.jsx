@@ -15,7 +15,7 @@ const Project = () => (
   >
     <ProjectTitle>Projects.</ProjectTitle>
     {ProjectData.map(project => (
-      <React.Fragment key={project.id}>
+      <Projects key={project.id}>
         <ProjectName>{project.title}</ProjectName>
         <ServiceWrap>
           <DescriptionWithBtn>
@@ -37,7 +37,7 @@ const Project = () => (
           />
           <ContentItem
             title="참여 인원"
-            content={`Frontend ${project.people.frontend}명 / Backend ${project.people.backend}명`}
+            content={`Frontend ${project.people.frontend}명 · Backend ${project.people.backend}명`}
           />
           <ContentItem title="관련 설명" content={project.explanation} />
           <ContentItem
@@ -46,7 +46,7 @@ const Project = () => (
           />
           <Skills title="기술 스택" skills={project.skills} />
         </ContentWrap>
-      </React.Fragment>
+      </Projects>
     ))}
   </ProjectWrap>
 )
@@ -76,11 +76,11 @@ const ProjectWrap = styled.div`
 
 const ProjectTitle = styled.h1`
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 90px;
   font-family: "IBM Plex Sans", sans-serif;
 `
-
+const Projects = styled.div``
 const ProjectName = styled.span`
   text-align: left;
   font-size: 20px;
@@ -159,6 +159,7 @@ const Image = styled.img`
   @media ${device.tablet}, ${device.mobileL} {
     margin-top: 40px;
   }
+  border-radius: 5px;
 `
 
 const ContentWrap = styled.div`
@@ -166,7 +167,7 @@ const ContentWrap = styled.div`
   flex-direction: column;
   margin-bottom: 120px;
   letter-spacing: 0.6px;
-  line-height: 3em;
+  line-height: 2em;
   div {
     margin: 30px 0;
     display: flex;
@@ -185,15 +186,15 @@ const FlexRow = styled.div`
 `
 
 const ContentLeft = styled.span`
-  width: 300px;
+  width: 200px;
   text-align: left;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
 `
 
 const ContentRight = styled.span`
   text-align: left;
-  font-size: 18px;
+  font-size: 17px;
   white-space: pre-line;
 `
 

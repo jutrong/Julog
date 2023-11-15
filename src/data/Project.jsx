@@ -50,7 +50,7 @@ const projectsData = [
     blogLink: "",
     duration: {
       start: "23.09.11",
-      end: "진행중",
+      end: "~",
     },
     people: {
       frontend: 1,

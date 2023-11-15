@@ -16,7 +16,7 @@ const portfoliodata = [
     categories: ["팀프로젝트"],
     image: sonminsoo,
     favicon: favicon,
-    path: "/sonminsoo",
+    path: "https://www.notion.so/d2cdcc26706c483d9c5c025e862eadc7?pvs=4",
   },
   {
     id: 2,
