@@ -21,10 +21,16 @@ const Project = () => (
           <DescriptionWithBtn>
             <ProjectDescription>{project.description}</ProjectDescription>
             <ButtonWrap>
-              <ProjectButton href={project.githubLink}>GITHUB</ProjectButton>
-              <ProjectButton href={project.liveLink}>Link</ProjectButton>
+              <ProjectButton href={project.githubLink} target="_blank">
+                GITHUB
+              </ProjectButton>
+              <ProjectButton href={project.liveLink} target="_blank">
+                Link
+              </ProjectButton>
               {project.blogLink && (
-                <ProjectButton href={project.blogLink}>Blog</ProjectButton>
+                <ProjectButton href={project.blogLink} target="_blank">
+                  Blog
+                </ProjectButton>
               )}
             </ButtonWrap>
           </DescriptionWithBtn>
@@ -35,10 +41,17 @@ const Project = () => (
             title="작업 기간"
             content={`${project.duration.start} - ${project.duration.end}`}
           />
-          <ContentItem
-            title="참여 인원"
-            content={`Frontend ${project.people.frontend}명 · Backend ${project.people.backend}명`}
-          />
+          {project.people.backend ? (
+            <ContentItem
+              title="참여 인원"
+              content={`Frontend ${project.people.frontend}명 · Backend ${project.people.backend}명`}
+            />
+          ) : (
+            <ContentItem
+              title="참여 인원"
+              content={`Frontend ${project.people.frontend}명`}
+            />
+          )}
           <ContentItem title="관련 설명" content={project.explanation} />
           <ContentItem
             title="구현 내용"
@@ -137,7 +150,7 @@ const ProjectButton = styled.a`
   outline: none;
   line-height: 25px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   width: 80px;
   height: 23px;
   background-color: #121212;
@@ -169,7 +182,7 @@ const ContentWrap = styled.div`
   letter-spacing: 0.6px;
   line-height: 2em;
   div {
-    margin: 30px 0;
+    margin: 20px 0;
     display: flex;
     align-items: start;
     @media ${device.mobileL} {

@@ -14,7 +14,7 @@ const projectsData = [
       PWA기반의 이미지 중심 소셜 네트워크 서비스를 개발하였습니다.`,
     ],
     githubLink: "https://github.com/jutrong/sonminsoo-project",
-    liveLink: "https://jutrong.netlify.app/sonminsoo/",
+    liveLink: "https://www.notion.so/d2cdcc26706c483d9c5c025e862eadc7?pvs=4",
     blogLink: "https://jutrong.netlify.app/blog/sonminsoo1/",
     duration: {
       start: "23.08.15",
@@ -46,7 +46,8 @@ const projectsData = [
       이력서 포트폴리오 블로그를 한 곳에 `,
     ],
     githubLink: "https://github.com/jutrong/Julog",
-    liveLink: "https://jutrong.netlify.app",
+    liveLink:
+      "https://www.notion.so/Julog-773341a7e4714a4797693102a2542344?pvs=4",
     blogLink: "",
     duration: {
       start: "23.09.11",
