@@ -85,7 +85,7 @@ const StrategyWrap = styled.div`
 `
 const StrategyTitle = styled.p`
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
 `
 const StrategyMain = styled.div`
   margin-top: 100px;

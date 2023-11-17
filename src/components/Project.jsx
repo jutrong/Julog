@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import device from "../styles/device"
 import ProjectData from "../data/Project"
+import { Link } from "gatsby"
 
 const Project = () => (
   <ProjectWrap
@@ -22,7 +23,7 @@ const Project = () => (
             <ProjectDescription>{project.description}</ProjectDescription>
             <ButtonWrap>
               <ProjectButton href={project.githubLink} target="_blank">
-                GITHUB
+                Github
               </ProjectButton>
               <ProjectButton href={project.liveLink} target="_blank">
                 Link
@@ -34,7 +35,9 @@ const Project = () => (
               )}
             </ButtonWrap>
           </DescriptionWithBtn>
-          <Image src={project.image} />
+          <Link to={project.liveLink} target="_blank">
+            <Image src={project.image} />
+          </Link>
         </ServiceWrap>
         <ContentWrap>
           <ContentItem
@@ -207,7 +210,7 @@ const ContentLeft = styled.span`
 
 const ContentRight = styled.span`
   text-align: left;
-  font-size: 17px;
+  font-size: 15px;
   white-space: pre-line;
 `
 

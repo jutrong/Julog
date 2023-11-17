@@ -25,7 +25,11 @@ const projectsData = [
       backend: 1,
     },
     image: phone,
-    explanation: `PWA기반의 SNS서비스를 개발하는 팀프로젝트입니다.`,
+    explanation: `최애의 아이돌 아이템을 쉽고 빠르게 찾고 구매할 수 있도록 소셜 네트워크 서비스를 개발하였습니다. 
+    사진을 업로드하여 궁금한 아이템을 의뢰를 할 수 있고, 
+    아이템의 구매링크로 손쉽게 이동할 수 있습니다. 
+    그리고 ! 특정 팬덤을 형성하여 팬덤들과 소통하며 정보를 공유하는 서비스 입니다.
+    PWA기반의 SNS서비스를 개발하였습니다.`,
     implementedFeatures: [
       `피드 페이지 CRUD
       댓글 작성 삭제
