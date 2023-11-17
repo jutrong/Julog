@@ -9,9 +9,10 @@ import Skills from "../components/Skills"
 import Experience from "../components/Experience"
 import Layout from "../components/layout"
 import Introduce from "../components/Introduce"
+import Strategy from "../components/strategy"
+
 import Seo from "../components/seo"
 import device from "../styles/device"
-import store from "../modules/Store"
 
 const Resume = () => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const Resume = () => {
         <Header />
         <Main>
           <Introduce />
+          <Strategy />
           <Line />
           <Project />
           <Line />
