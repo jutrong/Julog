@@ -16,7 +16,7 @@ const portfoliodata = [
     categories: ["팀프로젝트"],
     image: sonminsoo,
     favicon: favicon,
-    path: "https://www.notion.so/d2cdcc26706c483d9c5c025e862eadc7?pvs=4",
+    path: "https://www.notion.so/d2cdcc26706c483d9c5c025e862eadc7",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const portfoliodata = [
     categories: ["개인 프로젝트"],
     image: blog,
     favicon: favicon2,
-    path: "https://www.notion.so/Julog-773341a7e4714a4797693102a2542344?pvs=4",
+    path: "https://www.notion.so/Julog-773341a7e4714a4797693102a2542344",
   },
 ]
 
