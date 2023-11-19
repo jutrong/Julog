@@ -66,9 +66,10 @@ const Strategy = () => {
             <StrategyFullName>Dont repeat yourself</StrategyFullName>
           </StrategyBox>
           <StrategyDescription>
-            중복 코드를 최소화하고 유지보수성을 높이는데 주력합니다. 나의 코드는
+            중복 코드를 최소화하고 유지보수성을 높이는데 노력합니다. 코드는
             단순하면서도 효과적이며,
-            <br /> 불필요한 복잡성을 배제하여 유지보수와 확장성을 최적화합니다.
+            <br /> 불필요한 복잡성을 배제하여 유지보수와 확장성을 최적화하려고
+            합니다.
           </StrategyDescription>
         </StrategyDry>
       </StrategyMain>
