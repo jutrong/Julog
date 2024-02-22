@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import PostList from "../components/PostList"
+import PostList from "../components/blog/PostList"
 import store from "../modules/Store"
 import { Provider } from "react-redux"
 import Seo from "../components/seo"

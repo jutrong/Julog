@@ -68,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
     /* font-size: 10px; */
     font-family: 'Poppins', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
  Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
   }
 
   code {
@@ -78,6 +79,7 @@ const GlobalStyle = createGlobalStyle`
   .codeTitle {
     margin-top: 300px;
   }
+
 `
 
 export default GlobalStyle

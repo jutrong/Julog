@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import device from "../styles/device"
+import device from "../../styles/device"
 
 const PostLists = ({ totalCount, edges }) => {
   return (

@@ -4,12 +4,12 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 
 import Header from "../components/HeaderBar"
-import Project from "../components/Project"
-import Skills from "../components/Skills"
-import Experience from "../components/Experience"
+import Strategy from "../components/home/Strategy"
+import Project from "../components/home/Project"
+import Skills from "../components/home/Skills"
+import Experience from "../components/home/Experience"
 import Layout from "../components/layout"
-import Introduce from "../components/Introduce"
-import Strategy from "../components/strategy"
+import Introduce from "../components/home/Introduce"
 
 import Seo from "../components/seo"
 import device from "../styles/device"
@@ -20,22 +20,18 @@ const Resume = () => {
   }, [])
 
   return (
-    <Layout>
-      <Wrap>
-        <Header />
-        <Main>
-          <Introduce />
-          <Strategy />
-          <Line />
-          <Project />
-          <Line />
-          <Skills />
-          <Line />
-          <Experience />
-          <Line />
-        </Main>
-      </Wrap>
-    </Layout>
+    <>
+      <Layout>
+        <Wrap>
+          <Header />
+          <Main>
+            <Introduce />
+            <Strategy />
+          </Main>
+        </Wrap>
+      </Layout>
+      <Project />
+    </>
   )
 }
 
@@ -89,4 +85,11 @@ const Line = styled.div`
   height: 1px;
   background-color: #00000042;
   opacity: 0.1;
+`
+const BlackWrap = styled.div`
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
 `
