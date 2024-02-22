@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { skillsData } from "../data/Skill"
-import device from "../styles/device"
+import { skillsData } from "../../data/Skill"
+import device from "../../styles/device"
 
 const Skills = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import device from "../styles/device"
+import device from "../../styles/device"
 
 const fractureAnimation = keyframes`
   0% {

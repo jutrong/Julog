@@ -1,8 +1,8 @@
 import * as React from "react"
 import styled from "styled-components"
 
-import device from "../styles/device"
-import ProjectData from "../data/Project"
+import device from "../../styles/device"
+import ProjectData from "../../data/Project"
 import { Link } from "gatsby"
 
 const Project = () => (
