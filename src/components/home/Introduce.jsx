@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import * as S from "./style"
 import ImogeImage from "../../images/imoge.png"
 import MyImage from "../../images/myImgg.png"
+import resume from "../../images/resume.pdf"
 import { Link } from "gatsby"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -69,6 +70,11 @@ const Introduce = () => {
             <Link to="https://github.com/jutrong">
               😺 <S.ContactListA>Github</S.ContactListA>
             </Link>
+          </S.ContactList>
+          <S.ContactList>
+            <a href={resume} target="_blank" rel="noreferrer">
+              📜 <S.ContactListA>Resume</S.ContactListA>
+            </a>
           </S.ContactList>
         </S.IntroduceContact>
       </S.IntroduceText>

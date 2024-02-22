@@ -1,243 +1,47 @@
-import * as React from "react"
-import styled from "styled-components"
-
-import device from "../../styles/device"
-import ProjectData from "../../data/Project"
+import React from "react"
 import { Link } from "gatsby"
+import * as S from "./style"
+import useMenu from "../../hooks/useMenu"
 
-const Project = () => (
-  <ProjectWrap
-    data-aos="fade-up"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="true"
-    data-aos-anchor-placement="top-bottom"
-  >
-    <ProjectTitle>Projects.</ProjectTitle>
-    {ProjectData.map(project => (
-      <Projects key={project.id}>
-        <ProjectName>{project.title}</ProjectName>
-        <ServiceWrap>
-          <DescriptionWithBtn>
-            <ProjectDescription>{project.description}</ProjectDescription>
-            <ButtonWrap>
-              <ProjectButton href={project.githubLink} target="_blank">
-                Github
-              </ProjectButton>
-              <ProjectButton href={project.liveLink} target="_blank">
-                Link
-              </ProjectButton>
-              {project.blogLink && (
-                <ProjectButton href={project.blogLink} target="_blank">
-                  Blog
-                </ProjectButton>
-              )}
-            </ButtonWrap>
-          </DescriptionWithBtn>
-          <Link to={project.liveLink} target="_blank">
-            <Image src={project.image} />
-          </Link>
-        </ServiceWrap>
-        <ContentWrap>
-          <ContentItem
-            title="작업 기간"
-            content={`${project.duration.start} - ${project.duration.end}`}
-          />
-          {project.people.backend ? (
-            <ContentItem
-              title="참여 인원"
-              content={`Frontend ${project.people.frontend}명 · Backend ${project.people.backend}명`}
-            />
-          ) : (
-            <ContentItem
-              title="참여 인원"
-              content={`Frontend ${project.people.frontend}명`}
-            />
-          )}
-          <ContentItem title="관련 설명" content={project.explanation} />
-          <ContentItem
-            title="구현 내용"
-            content={project.implementedFeatures}
-          />
-          <Skills title="기술 스택" skills={project.skills} />
-        </ContentWrap>
-      </Projects>
-    ))}
-  </ProjectWrap>
-)
+const Project = () => {
+  const { setMenuState, isMenuOpen } = useMenu()
 
-const ContentItem = ({ title, content }) => (
-  <FlexRow>
-    <ContentLeft>{title}</ContentLeft>
-    <ContentRight>{content}</ContentRight>
-  </FlexRow>
-)
-
-const Skills = ({ title, skills }) => (
-  <>
-    <SkillsTitle>{title}</SkillsTitle>
-    <SkillsList>
-      {skills.map((skill, index) => (
-        <Skill key={index}>{skill}</Skill>
-      ))}
-    </SkillsList>
-  </>
-)
-
-const ProjectWrap = styled.div`
-  box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
-`
-
-const ProjectTitle = styled.h1`
-  text-align: left;
-  font-size: 20px;
-  margin-bottom: 90px;
-  font-family: "IBM Plex Sans", sans-serif;
-`
-const Projects = styled.div``
-const ProjectName = styled.span`
-  text-align: left;
-  font-size: 20px;
-  font-weight: 700;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 100%;
-  &::before {
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: auto;
-    height: 8px;
-    display: inline-block;
-    padding-right: 100px;
-    background-color: #d5f033;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.9;
-  }
-`
-
-const ServiceWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-  @media ${device.tablet}, ${device.mobileL} {
-    flex-direction: column;
-    margin-top: 20px;
-  }
-`
-
-const DescriptionWithBtn = styled.div`
-  text-align: left;
-  font-size: 16px;
-  margin: 40px 0 20px;
-  line-height: 35px;
-  letter-spacing: 0.46px;
-  white-space: pre-line;
-`
-
-const ProjectDescription = styled.p``
-
-const ButtonWrap = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-`
-
-const ProjectButton = styled.a`
-  margin-right: 15px;
-  border: none;
-  outline: none;
-  line-height: 25px;
-  text-align: center;
-  font-size: 12px;
-  width: 80px;
-  height: 23px;
-  background-color: #121212;
-  border-radius: 6px;
-  color: #fff;
-  display: block;
-  &:visited,
-  &:link {
-    color: white;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-`
-
-const Image = styled.img`
-  width: 200px;
-  margin-right: 60px;
-  @media ${device.tablet}, ${device.mobileL} {
-    margin-top: 40px;
-  }
-  border-radius: 5px;
-`
-
-const ContentWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 120px;
-  letter-spacing: 0.6px;
-  line-height: 2em;
-  div {
-    margin: 20px 0;
-    display: flex;
-    align-items: start;
-    @media ${device.mobileL} {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-  }
-`
-
-const FlexRow = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const ContentLeft = styled.span`
-  width: 200px;
-  text-align: left;
-  font-size: 20px;
-  font-weight: 600;
-`
-
-const ContentRight = styled.span`
-  text-align: left;
-  font-size: 15px;
-  white-space: pre-line;
-`
-
-const SkillsTitle = styled.div`
-  font-weight: 700;
-  text-align: left;
-  font-size: 25px;
-  @media ${device.mobileL} {
-    width: 90%;
-    font-weight: 900;
-  }
-`
-
-const SkillsList = styled.p`
-  text-align: left;
-  margin-top: 20px;
-  font-size: 20px;
-  white-space: pre-line;
-  line-height: 3em;
-  word-spacing: 40px;
-  letter-spacing: 2px;
-  font-family: "IBM Plex Sans", sans-serif;
-  @media ${device.mobileL} {
-    word-spacing: 20px;
-  }
-`
-
-const Skill = styled.span``
+  return (
+    <S.Wrap>
+      <Link to="/">
+        <S.Header isMenuOpen={isMenuOpen}>Jutrong.</S.Header>
+      </Link>
+      <S.ProjectWrap>
+        <div>
+          <S.ProjectTitle>BAB-FRIEND</S.ProjectTitle>
+          <S.ProjectInfo>
+            전국의 혼밥족들의 밥 친구를 찾는 커뮤니티
+          </S.ProjectInfo>
+        </div>
+        <Link
+          to="https://forest-cello-54d.notion.site/Julog-773341a7e4714a4797693102a2542344?pvs=4"
+          target="_blank"
+        >
+          <div>
+            <S.ProjectTitle>JULOG</S.ProjectTitle>
+            <S.ProjectInfo>블로그와 작업물을 담는 공간</S.ProjectInfo>
+          </div>
+        </Link>
+        <Link
+          to="https://forest-cello-54d.notion.site/d2cdcc26706c483d9c5c025e862eadc7?pvs=4"
+          target="_blank"
+        >
+          <div>
+            <S.ProjectTitle>THIEF-SONMINSOO</S.ProjectTitle>
+            <S.ProjectInfo>
+              최애의 아이돌 아이템을 쉽고 빠르게 찾고 구매할 수 있도록 소셜
+              네트워크 서비스를 개발하였습니다
+            </S.ProjectInfo>
+          </div>
+        </Link>
+      </S.ProjectWrap>
+    </S.Wrap>
+  )
+}
 
 export default Project
