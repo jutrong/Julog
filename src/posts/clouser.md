@@ -1,8 +1,10 @@
 ---
 date: "2023-12-10"
 title: "클로저를 설명해보시오"
-categories: ["Web", "SEO", "Optimization"]
+categories: Javascript
 thumbnail: "https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8JUVDJUJEJTk0JUVCJTk0JUE5fGVufDB8fDB8fHww"
+summary : "우리가 클로저를 이해해야하는 이유중에 하나는 React훅 useState를 이해하기 위해서이다.
+useState함수의 호출은 컴포넌트 첫 줄에서 종료되는데, setState는 useState 내부의 최신 값을 어떻게 계속 확인할 수 있을까?"
 ---
 
 ## 말로 설명할 수 있다는 것

@@ -1,15 +1,15 @@
 ---
 date: "2023-10-16"
 title: "About JWT"
-categories: ["Web", "SEO", "Optimization"]
-summary: "홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자."
+categories: "JWT"
+summary: "jwt 안에는 무엇이 들어 있을까?"
 thumbnail: "https://cdn.imweb.me/upload/S2022072697bdeb0d71cf5/fd6a3973f5426.jpeg"
 ---
 
 ## JWT에 대해 알아보기
 
-- jwt 안에는 무엇이 들어 있을까?
-  <br/>
+-- jwt 안에는 무엇이 들어 있을까?
+<br/>
 
 ![](https://velog.velcdn.com/images/jutrong/post/39e2263c-63a5-4a5f-ab92-c324433717ad/image.png)
 
@@ -51,4 +51,4 @@ jwt 토큰을 서버에 다시 주게되면 서버는 헤더랑 페이로드 시
 
 ❓중요한 정보를 왜 넣어두나요?
 
-- 토큰 자체가 스스로의 유효성을 검증하는 완결성을 가진다.
+-- 토큰 자체가 스스로의 유효성을 검증하는 완결성을 가진다.

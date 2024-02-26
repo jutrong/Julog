@@ -1,8 +1,8 @@
 ---
 date: "2023-11-11"
 title: "내가 생각하는 클린코드란"
-categories: ["Web", "SEO", "Optimization"]
-summary: "홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자."
+categories: CleanCode
+summary: "내가 클린코드보다 중요하게 생각하는 것"
 thumbnail: "https://images.unsplash.com/photo-1489110804417-276c3f517515?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 

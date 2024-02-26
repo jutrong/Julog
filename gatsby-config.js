@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `Jutrong`,
     author: `jutrong`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://jutrong.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -53,6 +53,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `red`,
+        showSpinner: true,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -63,9 +70,32 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
             },
           },
           {
