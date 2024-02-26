@@ -42,7 +42,7 @@ export const ContentWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
-  width: 100%;
+  width: 70%;
   @media ${device.tablet} {
     margin-top: 50px;
     align-items: center;
@@ -51,18 +51,18 @@ export const ContentWrap = styled.div`
 export const Title = styled.p`
   font-size: 34px;
   font-weight: 800;
-  line-height: 1.4em;
+  line-height: 1.2em;
 `
 export const description = styled.p`
-  font-size: 18px;
-  line-height: 1.4em;
-  /* text-overflow: ellipsis;
+  font-size: 15px;
+  opacity: 0.6;
+  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; */
+  white-space: nowrap;
 `
 export const Time = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: lighter;
-  margin-left: 14px;
+  margin-left: 5px;
   color: #191919;
 `

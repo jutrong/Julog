@@ -1,8 +1,8 @@
 ---
 date: "2023-11-16"
-title: "프리온보딩-클린코딩 : 런타임 에러는 구분할 수 있어야 한다."
-categories: ["Web", "SEO", "Optimization"]
-summary: "홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자."
+title: "프리온보딩-클린코딩"
+categories: CleanCode
+summary: "런타임 에러는 구분할 수 있어야한다."
 thumbnail: "https://images.unsplash.com/photo-1489097474497-6db3de299415?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8JUVCJUFDJUI0JUVDJUIxJTg0JUVDJTgzJTg5fGVufDB8fDB8fHww"
 ---
 

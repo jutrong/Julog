@@ -1,4 +1,4 @@
-import "prismjs/themes/prism-tomorrow.css"
+import "prismjs/themes/prism-twilight.css"
 import React from "react"
 import { Provider } from "react-redux"
 import store from "./src/modules/Store"

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
@@ -9,6 +9,21 @@ import Seo from "../components/seo"
 
 const Blog = ({ data }) => {
   const { totalCount, edges } = data.allMarkdownRemark
+  const [selectedCategory, setSelectedCategory] = useState(null)
+
+  const uniqueCategories = Array.from(
+    new Set(edges.flatMap(({ node }) => node.frontmatter.categories))
+  )
+
+  const handleCategoryClick = category => {
+    setSelectedCategory(category)
+  }
+
+  const filteredPosts = selectedCategory
+    ? edges.filter(({ node }) =>
+        node.frontmatter.categories.includes(selectedCategory)
+      )
+    : edges
 
   return (
     <Provider store={store}>
@@ -16,22 +31,16 @@ const Blog = ({ data }) => {
         <MainTitle>Blog</MainTitle>
         <PostCount>{totalCount} Posts</PostCount>
         <Category>
-          <CategoryItem>JAVASCRIPT</CategoryItem>
-          <CategoryItem>JAVAS</CategoryItem>
-          <CategoryItem>JA</CategoryItem>
-          <CategoryItem>리액트</CategoryItem>
-          <CategoryItem>자바스크립트</CategoryItem>
-          <CategoryItem>타입스크립트</CategoryItem>
-          <CategoryItem>JAVASCRIPT</CategoryItem>
-          <CategoryItem>JASCRIPT</CategoryItem>
-          <CategoryItem>JAVASCPT</CategoryItem>
-          <CategoryItem>JAVASCRIPT</CategoryItem>
-          <CategoryItem>JAVASCRIPT</CategoryItem>
-          <CategoryItem>JAVASCRIPTS</CategoryItem>
-          <CategoryItem>JAVASCRIPT</CategoryItem>
-          <CategoryItem>JAVASCRIPT</CategoryItem>
+          <CategoryItem onClick={() => setSelectedCategory(null)}>
+            ALL
+          </CategoryItem>
+          {uniqueCategories.map((data, index) => (
+            <CategoryItem key={index} onClick={() => handleCategoryClick(data)}>
+              {data}
+            </CategoryItem>
+          ))}
         </Category>
-        {edges.map(data => (
+        {filteredPosts.map(data => (
           <PostList key={data.node.id} postData={data} />
         ))}
       </Layout>

@@ -3,18 +3,21 @@ import { Link } from "gatsby"
 import * as S from "./style"
 
 const PostLists = ({ postData }) => {
+  const { node } = postData
+  const { slug } = node.fields
+  const { title, thumbnail, summary, date } = node.frontmatter
   return (
     <>
       <S.PostList>
-        <Link to={postData.node.fields.slug}>
+        <Link to={slug}>
           <S.PostWrap>
             <S.ThumbnailWrap>
-              <S.Thumbnail src={postData.node.frontmatter.thumbnail} />
+              <S.Thumbnail src={thumbnail} alt={`Thumbnail of ${title}`} />
             </S.ThumbnailWrap>
             <S.ContentWrap>
-              <S.Title>{postData.node.frontmatter.title}</S.Title>
-              <S.description>{postData.node.frontmatter.summary}</S.description>
-              <S.Time>{postData.node.frontmatter.date}</S.Time>
+              <S.Title>{title}</S.Title>
+              <S.description>{summary}</S.description>
+              <S.Time>{date}</S.Time>
             </S.ContentWrap>
           </S.PostWrap>
         </Link>

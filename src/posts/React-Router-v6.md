@@ -1,30 +1,30 @@
 ---
 date: "2023-10-01"
-title: "React-router v6을 활용한 당장손민수 리팩토링"
-categories: ["Web", "SEO", "Optimization"]
-summary: "홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자."
-thumbnail: "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MDhfMjUw%2FMDAxNjgzNTQ5Mjg3Mjc3.gfPmk3-BrVj2oJP-gdAal2SFdeBo_ut2DXkRdXKvY6Yg.laSn2cyZfc4anjpdCn2-kxuLBptQx8XicOzN6vhkRL4g.JPEG.conkowisa469%2FKakaoTalk_20230508_005503373_24.jpg&type=ofullfill340_600_png"
+title: "React-router v6을 활용한 리팩토링"
+thumbnail: "https://velog.velcdn.com/images/jutrong/post/0e015933-1f85-4e58-968c-b778ee722fb9/image.png"
+categories : "React-Router v6"
+summary : "피드 작성, 피드 수정부분을 boolean값으로 구분을 지었다.
+useNavigation으로 isUpdate값을 넘겨주어서 false이면 피드 작성,
+true면 피드 수정으로 화면을 보여주었다."
 ---
 
-# 개요
+## 개요
 
 당장손민수 프로젝트 리팩토링 진행중에 react-router v6에 대한 강의를 듣다가 useOutletContext, useLocation, usePramas에 대해 알게되었다. 이것을 활용하여 기존 프로젝트에 도입하면 괜찮겠다(?)라는 생각이 들었다.
-<br/>
-<br/>
+</br>
+</br>
 
-# 기존 프로젝트 구조
+## 기존 프로젝트 구조
 
 pages폴더에 page를 보여주는 하나의 폴더 and 파일이 있고 데이터를 패칭받는다 그리고 components폴더에서는 비즈니스 로직이 생성된다.
 
 ![](https://velog.velcdn.com/images/jutrong/post/0e015933-1f85-4e58-968c-b778ee722fb9/image.png)
 
 컴포넌트 구조를 간단하게 시각화 시켜보았다.
-<br/>
-<br/>
+</br>
+</br>
 
-# useLocation으로 이미지 파일 전송
-
-<br/>
+## useLocation으로 이미지 파일 전송
 
 FeedWrite 컴포넌트에서 이미지 파일을 선택하여 피드 글을 작성하는 것을 구현하려고 했다.
 선택한 이미지 파일을 state값에 담고 context api를 사용하여 넘기려고 고민을 하였다. 그런데 이 기능 구현을 위해 context api를 사용하는건 자제하고 싶었고 최대한 react hook을 이용하여 구현하고 싶었다.
@@ -67,19 +67,12 @@ feedWrite.tsx
 
 이렇게 변수에 저장하여 이미지를 업로드 시킬 수 있었다.
 $updatePage는 boolean값, writeImg는 글쓰기 화면에서 띄워지는 이미지, selecImg는 formdata post 전송되는 값이다.
-<br/>
-<br/>
+
 ![](https://velog.velcdn.com/images/jutrong/post/0c855cf3-a5b6-4a16-b334-19b0c3848569/image.gif)
-<br/>
-<br/>
-<br/>
+</br>
+</br>
 
-# boolean값에 따라 달라지는 피드 업데이트와 작성
-
-<br/>
-<br/>
-
-![](https://velog.velcdn.com/images/jutrong/post/e96c0cdc-b837-4460-9287-b01864c05dcb/image.png)
+## boolean값에 따라 달라지는 피드 업데이트와 작성
 
 피드 작성, 피드 수정부분을 boolean값으로 구분을 지었다.
 useNavigation으로 isUpdate값을 넘겨주어서 false이면 피드 작성,

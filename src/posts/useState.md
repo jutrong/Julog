@@ -2,6 +2,9 @@
 date: "2023-12-16"
 title: "useState는 어떻게 동작할까"
 thumbnail: "https://i.pinimg.com/550x/6e/38/58/6e385876fc0825c967cad3bc935bf176.jpg"
+categories : "useState"
+summary : "useState를 포함한 hooks는 react 모듈에 선언되어있는 함수이고
+실행 될 때 마다 dispatcher를 선언하고 useState 메소드 실행해서 그 값을 반환한다."
 ---
 
 React를 통해 개발하면서 useState는 필수적으로 사용할 것이다. 리액트 deep dive를 보기 전에는 hook의 역할과 사용법만 알고 내부 동작 원리가 어떻게 되는가, 정말 잘 사용하려면 어떻게 해야하나? 라는 깊은 생각은 하지 않았었다.
