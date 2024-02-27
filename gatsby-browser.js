@@ -6,3 +6,8 @@ import store from "./src/modules/Store"
 export const wrapRootElement = ({ element }) => {
   return <Provider store={store}>{element}</Provider>
 }
+export const onInitialClientRender = () => {
+  setTimeout(function () {
+    document.getElementById("___loader").style.display = "none"
+  }, 1000)
+}
