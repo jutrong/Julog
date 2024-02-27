@@ -2,10 +2,33 @@ import sonminsoo from "../images/sonminsoo.png"
 import favicon from "../images/favi.svg"
 import blog from "../images/menu1.png"
 import favicon2 from "../images/favi2.svg"
+import ricefavi from "../images/rice.jpg"
+import babfriend from "../images/bab.jpg"
 
 const portfoliodata = [
   {
     id: 1,
+    title: "BAB-FRIEND",
+    period: "2023·12 → 리팩토링 진행중",
+    skills: [
+      "React",
+      "Typescript",
+      "Styled-components",
+      "Recoil",
+      "Tanstack-query",
+      "AWS S3",
+    ],
+    links: {
+      github: "https://github.com/jutrong/BAB_FRIEND",
+      link: "https://bab-friend.com/",
+    },
+    categories: ["팀 프로젝트"],
+    image: babfriend,
+    favicon: ricefavi,
+    path: "https://forest-cello-54d.notion.site/e3c58ba2e9e14baaae5fcabda157ada2",
+  },
+  {
+    id: 3,
     title: "당장-손민수",
     period: "2023·08·15 → 2023·09·02",
     skills: ["React", "Typescript", "Styled-components", "PWA"],
